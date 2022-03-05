@@ -1,0 +1,17 @@
+{
+  "name": "blog-posts",
+  "version": "1.0.0",
+  "repository": "https://github.com/illumination-k/blog-posts",
+  "author": "illumination-k <illumination.k.27@gmail.com>",
+  "license": "MIT",
+  "husky": {
+    "pre-push": "yarn prep"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  },
+  "scripts": {
+    "prep": "./smark prep --index-dir index --input posts",
+    "dev": "./smark run --index-dir index --static-dir ./images --port ${PORT:-8080}"
+  }
+}
