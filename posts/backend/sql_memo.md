@@ -1,6 +1,11 @@
 ---
+uuid: de87d9d5-2362-48d7-a31e-af9b33a234aa
 title: SQLに関するメモ書き
 description: SQLに関するメモ
+lang: ja
+category: backend
+created_at: 2021/6/16
+updated_at: 2021/9/29
 ---
 
 ## TL;DR

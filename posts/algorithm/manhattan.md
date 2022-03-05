@@ -4,8 +4,8 @@ title: Manhattan Distance Memo
 description: マンハッタン距離に関するメモ
 lang: ja
 category: algorithm
-created_at: "2022-01-14T07:29:34+00:00"
-updated_at: "2022-01-14T07:29:34+00:00"
+created_at: 2022/01/14
+updated_at: "2022-03-05T10:36:47+00:00"
 ---
 
 ## TL;DR

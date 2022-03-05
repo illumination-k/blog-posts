@@ -4,8 +4,8 @@ title: bit全探索を理解するために
 description: bit全探索が何をやっているのか理解するのが難しかったので、何が起こっているのかをまとめた
 lang: ja
 category: algorithm
-created_at: "2022-03-05T05:23:40+00:00"
-updated_at: "2022-03-05T05:23:40+00:00"
+created_at: "2021/8/26"
+updated_at: "2021/9/29"
 ---
 
 ## TL;DR

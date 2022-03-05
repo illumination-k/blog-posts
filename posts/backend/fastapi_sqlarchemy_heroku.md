@@ -1,6 +1,11 @@
 ---
+uuid: 355eb8b4-1c9e-4a0f-a1d9-4702acac26f8
 title: FastAPI + SQLAlechmy (Postgres) でHerokuにデプロイ
 description: 思ったよりFastAPI、PostgresでHerokuにデプロイするということにだけ焦点を当てた記事が見つからなかったので書いておきました。
+lang: ja
+category: backend
+created_at: 2021/6/20
+updated_at: 2021/9/29
 ---
 
 ## TL;DR

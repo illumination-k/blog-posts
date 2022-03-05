@@ -1,6 +1,11 @@
 ---
+uuid: 428cbaba-1dc2-4887-88dd-ce9ccee4c0b6
 title: AWSでElastic IPアドレスを開放していなかったばっかりに損した話
 description: AWS使って遊び終わったあと放置していると請求が来るという怖い話
+lang: ja
+category: backend
+created_at: 2021/8/26
+updated_at: 2021/9/29
 ---
 
 ## 何が起こったのか
@@ -15,7 +20,7 @@ Elastic IPをとってEC2インスタンスを起動して簡単なPythonのWeb�
 結論から言うと、Elastic IPを開放していなかったために起こってしまった事故でした。
 気を付けていないと謎の請求が来るAWS、皆さんも気を付けてください。
 
-## 請求を見たときの筆者
+## 請求を見たとき
 
 おかしい、EC2インスタンスは無効にしたはず、と思って請求書を急いで確認しに行きました。
 そうすると請求書のElastic Compute Cloudにこんな文字列が...
