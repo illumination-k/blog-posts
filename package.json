@@ -5,7 +5,9 @@
   "author": "illumination-k <illumination.k.27@gmail.com>",
   "license": "MIT",
   "husky": {
-    "pre-push": "yarn prep"
+    "hooks": {
+      "pre-push": "yarn prep"
+    }
   },
   "devDependencies": {
     "husky": "^7.0.4"
