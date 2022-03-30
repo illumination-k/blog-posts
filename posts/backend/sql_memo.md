@@ -4,8 +4,8 @@ title: SQLに関するメモ書き
 description: SQLに関するメモ
 lang: ja
 category: backend
-created_at: 2021/6/16
-updated_at: 2021/9/29
+created_at: 2021/06/16
+updated_at: 2021/09/29
 ---
 
 ## TL;DR

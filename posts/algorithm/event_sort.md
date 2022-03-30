@@ -4,8 +4,8 @@ title: イベントソート
 description: イベントソートの自分なりの解釈
 lang: ja
 category: algorithm
-created_at: "2021/10/1"
-updated_at: "2021/10/1"
+created_at: 2021/10/01
+updated_at: 2021/10/01
 ---
 
 ## 概要
