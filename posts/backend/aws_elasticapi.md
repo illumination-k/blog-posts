@@ -4,8 +4,8 @@ title: AWSでElastic IPアドレスを開放していなかったばっかりに
 description: AWS使って遊び終わったあと放置していると請求が来るという怖い話
 lang: ja
 category: backend
-created_at: 2021/08/26
-updated_at: 2021/09/29
+created_at: 2021/08/27
+updated_at: "2022-04-05T19:13:07+00:00"
 ---
 
 ## 何が起こったのか
