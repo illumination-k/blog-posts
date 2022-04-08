@@ -5,7 +5,7 @@ description: matplotlibを使っていて、colorbarだけ作りたいとき、�
 lang: ja
 category: python
 created_at: 2020/09/26
-updated_at: 2021/09/29
+updated_at: "2022-04-08T00:23:19+00:00"
 ---
 ## TL;DR
 
@@ -54,7 +54,7 @@ cbar = mpl.colorbar.ColorbarBase(
 plt.savefig("sample_colormap.png", bbox_inches="tight")
 ````
 
-<amp-img src="/images/colorbar_sample.png" height="20rem" width="8rem" alt="sample_colorbar" />
+<amp-img src="/public/colorbar_sample.png" height="20rem" width="8rem" alt="sample_colorbar" />
 
 対応するrgbaカラーを取得します。
 

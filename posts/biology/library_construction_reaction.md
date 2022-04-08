@@ -5,7 +5,7 @@ description: NGSライブラリ調製の際には多様な反応が使用され�
 lang: ja
 category: biology
 created_at: 2021/01/03
-updated_at: 2021/10/28
+updated_at: "2022-04-08T00:23:18+00:00"
 ---
 
 ## TL;DR
@@ -49,7 +49,7 @@ RNA-seqのときの最初のステップとして行われる反応です。こ�
 
 狙った遺伝子のcDNAのみを合成できます。基本的にはRT-PCRとかのときだけ使われます。
 
-![RT-primers](/public/images/library_construction/RT_primers.png)
+![RT-primers](../../public/library_construction/RT_primers.png)
 
 
 ## TSO (template switching oligo)
@@ -58,7 +58,7 @@ RNA-seqのときの最初のステップとして行われる反応です。こ�
 
 cDNAを合成する際に、3'末端にpolyC配列を付加し、それと相補的なpolyG配列を3'末端側にもつDNA oligo (template swithching oligo) を用います。これによって、3'末端を修飾しつつSecond strand synthesisを行うことができます。この反応によって、3'末端側にバーコードやアダプターが付加されます。こういった酵素は高濃度のマグネシウムやマグネシウムイオン存在下で、cDNA合成中、あるいは反応後半に誘導されます。
 
-![md={6}:tso](/images/library_construction/tso.png)
+![md={6}:tso](../../public/library_construction/tso.png)
 
 ## Klenow Fragment
 
@@ -81,7 +81,7 @@ ligationはDNA同士をつなげる反応で、ライブラリ調製以外にも
 
 Uracil DNA GlycosylaseとEndonuclease VIIIの両方の活性を持つ酵素です。二本鎖DNAの中のUを除去し、nickを入れることができます。
 
-![md={6}:USER](/public/images/library_construction/USER_Mechanism.png)
+![md={6}:USER](../../public/library_construction/USER_Mechanism.png)
 
 Adaptorの切断やUSER cloningなどに使われることがあります。
 

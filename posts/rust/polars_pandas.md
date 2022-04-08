@@ -5,7 +5,7 @@ description: rustにも実はpandas likeなcrateがあることを知ったの�
 lang: ja
 category: rust
 created_at: 2021/01/09
-updated_at: 2021/12/17
+updated_at: "2022-04-08T00:35:01+00:00"
 ---
 
 ## TL;DR
@@ -16,7 +16,7 @@ rustにも実はpandas likeなcrateがあることを知ったのでpandasとの
 
 [excvr](https://github.com/google/evcxr)を使えばJupyter上で動かせます。Jupyter labを使うとPythonとRustの比較が非常にやりやすくて良かったです。
 
-![jupyter-image](/images/polars_pandas/jupyter_image.PNG)
+![jupyter-image](../../public/polars_pandas/jupyter_image.PNG)
 
 
 ただ補完や型の推測が効かないので少し困りました。`rust-analyzer`対応もしてみました。補完は効くようになりましたが、やはりVSCodeなどに比べると微妙。  
@@ -76,43 +76,47 @@ print(pd.__version__)
 
 非常に長いので畳んである。ChunkedArrayは大抵の演算ができる。Seriesの比較は条件による行選択の際に必要なので見ておくとよいです。
 
-<details><summary>numberとSeries</summary><div>
+<details>
+<summary>numberとSeries</summary>
 
 | 演算名 | vs number |
 | ------ | --------- |
-| add    | `s + 1`   |
-| sub    | `s - 1`   |
-| div    | `s / 1`   |
-| mul    | `s * 1`   |
+| `add`    | `s + 1`   |
+| `sub`    | `s - 1`   |
+| `div`    | `s / 1`   |
+| `mul`    | `s * 1`   |
 
-</div></details>
+</details>
 
-<details><summary>SeriesとSeries</summary><div>
+<details>
+<summary>SeriesとSeries</summary>
 
 | 演算名 | 操作                  |
 | ------ | --------------------- |
-| add    | `&s1 + &s2`           |
-| sub    | `&s1 - &s2`           |
-| div    | `&s1 / &s2`           |
-| mul    | `&s1 * &s2`           |
-| mod    | `&s1 % &s2`           |
-| eq     | `s1.series_equal(s2)` |
+| `add`    | `&s1 + &s2`           |
+| `sub`    | `&s1 - &s2`           |
+| `div`    | `&s1 / &s2`           |
+| `mul`    | `&s1 * &s2`           |
+| `mod`    | `&s1 % &s2`           |
+| `eq`     | `s1.series_equal(s2)` |
 
-</div></details>
+</details>
 
-<details><summary>DataFrameとSeries</summary><div>
+<details>
+<summary>DataFrameとSeries</summary>
 
 | 演算名 | 操作       |
 | ------ | ---------- |
-| add    | `&df + &s` |
-| sub    | `&df - &s` |
-| div    | `&df / &s` |
-| mul    | `&df * &s` |
-| mod    | `&df % &s` |
+| `add`    | `&df + &s` |
+| `sub`    | `&df - &s` |
+| `div`    | `&df / &s` |
+| `mul`    | `&df * &s` |
+| `mod`    | `&df % &s` |
 
-</div></details>
+</details>
 
-<details><summary>Seriesの演算</summary><div>
+<details>
+<summary>Seriesの演算</summary>
 
 | 演算名 | 操作          |
 | ------ | ------------- |
@@ -121,7 +125,7 @@ print(pd.__version__)
 | min    | `s.min<T>()`  |
 | mean   | `s.mean<T>()` |
 
-</div></details>
+</details>
 
 <details>
 <summary>Seriesの比較</summary>
@@ -136,10 +140,11 @@ Series同士、Seriesとnumberを比較できる
 | `=>` | `s1.gt_eq(s2)`     | `s1.gt_eq(1)`     |
 | `<`  | `s1.lt(s2)`        | `s1.lt(1)`        |
 | `<=` | `s1.lt_eq(s2)`     | `s1.lt_eq(1)`     |
-<div>
-</div></details>
 
-<details><summary>DataFrameの演算</summary><div>
+</details>
+
+<details>
+<summary>DataFrameの演算</summary>
 
 | 演算名 | 操作          |
 | ------ | ------------- |
@@ -151,7 +156,7 @@ Series同士、Seriesとnumberを比較できる
 | var    | `df.var()`    |
 | std    | `df.std()`    |
 
-</div></details>
+</details>
 
 <details>
 <summary>ChunckedArrayの演算</summary>
@@ -186,8 +191,7 @@ c1.lt(c2);
 
 default featureのtemporalがあれば、時間のパースもできます。
 
-<div>
-</div></details>
+</details>
 
 ## Seriesの作成
 

@@ -5,7 +5,7 @@ description: RustでJupyter環境を構築して、rust-analyzerで補完でき�
 lang: ja
 category: rust
 created_at: 2021/12/14
-updated_at: 2021/12/17
+updated_at: "2022-04-08T00:23:19+00:00"
 ---
 
 ## TL;DR
@@ -114,6 +114,6 @@ cargo new work
 これで、`docker-compose up`でjupyterが起動するはずです。
 以下のように補完が効くようになります。
 
-![evxcr_jupyter_lsp_example](/public/images/evcxr_jupyter_lsp.PNG)
+![evxcr_jupyter_lsp_example](../../public/evcxr_jupyter_lsp.PNG)
 
 VSCodeほどではないですが、tab補完よりは快適な気がします。

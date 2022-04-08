@@ -5,7 +5,7 @@ description: 次世代シーケンサー(NGS)解析技術の発展に伴い、�
 lang: ja
 category: biology
 created_at: 2021/06/22
-updated_at: 2021/09/29
+updated_at: "2022-04-08T00:23:19+00:00"
 ---
 
 ## TL;DR
@@ -74,13 +74,7 @@ annotation={<>       <P5>Illumina P5</P5>              <T7>i5</T7>             <
 6. PCRで増幅します。
 7. シーケンスへ。
 
-<amp-img
-    layout="fixed"
-    src="/images/seq_summary/truseq.PNG"
-    alt="truseq"
-    width="516"
-    height="282"
-/>
+![truseq](../../public/seq_summary/truseq.PNG)
 
 > [次世代シーケンサー用ライブラリー調製試薬](https://www.nebj.jp/jp/Flyer/NEBNEXT.pdf)
 
@@ -90,13 +84,7 @@ annotation={<>       <P5>Illumina P5</P5>              <T7>i5</T7>             <
 2. 付加した配列を鋳型にするプライマーを使って、PCRで残りのアダプターを付加します。
 3. シーケンスへ
 
-<amp-img
-    layout="fixed"
-    src="/images/seq_summary/nextera.PNG"
-    alt="nextera"
-    width="343"
-    height="300"
-/>
+![nextera](../../public/seq_summary/nextera.PNG)
 
 > [次世代シーケンサー用ライブラリー調製試薬](https://www.nebj.jp/jp/Flyer/NEBNEXT.pdf)
 
@@ -108,7 +96,7 @@ annotation={<>       <P5>Illumina P5</P5>              <T7>i5</T7>             <
 
 シーケンサーにライブラリを入れるとき、1つのライブラリではなく複数のライブラリを同時に流します。その際に、そのリードがどのライブラリ由来なのかを判別するために使われるのがインデックス配列です。つまり、1つのライブラリにユニークなIDを配列という形で付与することで、1回のシーケンスで複数のサンプルを同時に解析し、後でそれを区別するための仕組みです。デュアルインデックスにすると、インデックス配列が2個あるので、インデックス配列の組み合わせがユニークなIDとなります。
 
-![multiplex](/images/seq_summary/multiplex.PNG)
+![multiplex](../../public/seq_summary/multiplex.PNG)
 > [NGS超入門](https://www.adres.ehime-u.ac.jp/news/NGS1.pdf)
 
 ### シングルインデックスかつペアエンドの場合
@@ -118,7 +106,7 @@ annotation={<>       <P5>Illumina P5</P5>              <T7>i5</T7>             <
 3. ブリッジする。
 4. Read2側からinset-DNAのシーケンスを読みます **(c)**。
 
-![single_index_pair](/images/seq_summary/single_index_pair.PNG)
+![single_index_pair](../../public/seq_summary/single_index_pair.PNG)
 > [NGS超入門](https://www.adres.ehime-u.ac.jp/news/NGS1.pdf)
 
 ### デュアルインデックスかつペアエンドの場合
@@ -128,7 +116,7 @@ annotation={<>       <P5>Illumina P5</P5>              <T7>i5</T7>             <
 3. ブリッジしたあとP5側からインデックス配列2を読みます。
 4. Read2側からinset-DNAのシーケンスを読みます。
 
-![dual_index_pair](/images/seq_summary/dual_index_pair.PNG)
+![dual_index_pair](../../public/seq_summary/dual_index_pair.PNG)
 > [NGS超入門](https://www.adres.ehime-u.ac.jp/news/NGS1.pdf)
 
 ## 参考文献

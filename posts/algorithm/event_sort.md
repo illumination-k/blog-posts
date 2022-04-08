@@ -5,7 +5,7 @@ description: イベントソートの自分なりの解釈
 lang: ja
 category: algorithm
 created_at: 2021/10/01
-updated_at: 2021/10/01
+updated_at: "2022-04-08T00:23:18+00:00"
 ---
 
 ## 概要
@@ -19,7 +19,7 @@ updated_at: 2021/10/01
 
 [ABC128-E](https://atcoder.jp/contests/abc128/tasks/abc128_e)の例を考えます。
 
-![abc128_example](https://blog-post-smark.herokuapp.com/public/abc128_img.png)
+![abc128_example](../../public/abc128_img.png)
 
 図としてはこのようになっており、それぞれのクエリの最小値を求める必要があります。
 このとき、$X_i$についての集合$X$を考えます。そして、左端の部分を$X_i$の$X$への挿入、右端の部分を$X_i$の$X$からの削除というイベントとしてとらえます。また、クエリはクエリというイベントとして処理してみます。
@@ -34,7 +34,7 @@ updated_at: 2021/10/01
 
 ABC128の例を処理してみると以下のようになることがわかります。
 
-![abc128_event](https://blog-post-smark.herokuapp.com/public/abc128_event.png)
+![abc128_event](../../public/abc128_event.png)
 
 
 こうすると、場所$D_i$における範囲の持つ値は、集合$X$に入っている値になります。なので、クエリイベントでは、集合$X$の最小値がその場所における答え、ということになります。Indexを用意しておくと、答えの配列に直接最小値を書き込めます。
