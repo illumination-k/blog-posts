@@ -194,6 +194,4 @@ upsetplot.plot(upset_data, subset_size="count", show_counts="%d", sort_categorie
 ## Reference
 
 - [upsetplot Documentation](https://buildmedia.readthedocs.org/media/pdf/upsetplot/latest/upsetplot.pdf)
-<!-- textlint-disable -->
 - Alexander Lex, Nils Gehlenborg, Hendrik Strobelt, Romain Vuillemot, Hanspeter Pfister,UpSet: Visual-ization of Intersecting Sets, IEEE Transactions on Visualization and Computer Graphics (InfoVis ‘14), vol.20, no. 12, pp. 1983–1992, 2014. doi: doi.org/10.1109/TVCG.2014.2346248
-<!-- textlint-disable -->

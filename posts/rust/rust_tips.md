@@ -5,7 +5,7 @@ description: rustで覚えておきたいことのメモ
 lang: ja
 category: rust
 created_at: 2021/07/17
-updated_at: 2021/09/29
+updated_at: 2022/04/09
 ---
 
 ## TL;DR
@@ -41,7 +41,7 @@ assert_eq!(cumsum, vec![0, 1, 3, 6])
 ```
 
 
-## std::vecのbinary_search
+## `std::vec`のbinary_search
 
 普通に便利なんだけど、同じ値が含まれていた場合、matchそのものは値全部にできるのだが、返ってくる値は最大のindexを返す。なので、lower_boundがしたいときは[superslice](https://docs.rs/superslice/1.0.0/superslice/)を使ったほうがよさそう。もしくは自分で書くか。
 

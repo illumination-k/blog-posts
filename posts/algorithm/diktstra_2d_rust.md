@@ -5,7 +5,7 @@ description: 二次元平面上でダイクトストラやりたいってとき�
 lang: ja
 category: algorithm
 created_at: 2021/08/27
-updated_at: "2022-04-05T19:13:06+00:00"
+updated_at: "2022-04-09T14:00:05+00:00"
 ---
 
 ## TL;DR
@@ -39,7 +39,7 @@ use itertools::Itertools;
 use itertools_num::ItertoolsNum;
 ```
 
-## 例1: ARC005 C - 器物損壊！高橋君
+## 例1 ARC005 C - 器物損壊！高橋君
 
 [問題ページ](https://atcoder.jp/contests/arc005/tasks/arc005_3)
 
@@ -101,7 +101,7 @@ fn main() {
 }
 ```
 
-## 例2: A - Range Flip Find Route
+## 例2 A - Range Flip Find Route
 
 [問題ページ](https://atcoder.jp/contests/agc043/tasks/agc043_a)
 
@@ -144,7 +144,7 @@ fn main() {
 }
 ```
 
-## 例3: D - Wizard in Maze
+## 例3 D - Wizard in Maze
 
 [問題ページ](https://atcoder.jp/contests/abc176/tasks/abc176_d)
 
@@ -202,7 +202,7 @@ fn main() {
 }
 ```
 
-## 例4: J - 地ならし
+## 例4 J - 地ならし
 
 [問題ページ](https://atcoder.jp/contests/past201912-open/tasks/past201912_j)
 

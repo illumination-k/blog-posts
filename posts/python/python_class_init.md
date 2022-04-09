@@ -5,7 +5,7 @@ description: PythonのClassは色々難しいので、勉強のためにまと�
 lang: ja
 category: python
 created_at: 2021/06/29
-updated_at: 2021/09/29
+updated_at: 2022/04/09
 ---
 
 ## TL;DR
@@ -112,12 +112,10 @@ print("classname:", mike.class_name, "name:", mike.name)
 2. tupleなどのimmutableなオブジェクトの初期化
     - [\_\_new\_\_ ってなに？](https://python.ms/new/)
 
-<!-- textlint-disable -->
 3. メタクラスを利用してクラスを切り替える
     - [メタクラスとクラスデコレータってなに？](https://python.ms/metaclass/)
     - [\_\_new\_\_と\_\_init\_\とメタクラスと](https://qiita.com/FGtatsuro/items/49f907a809e53b874b18)
     - [[python]メタプログラミングの基礎(\_\_init\_\_, \_\_new\_\_, \_\_metaclass\_\_)](https://dackdive.hateblo.jp/entry/2015/08/02/100000)
-<!-- textlint-disable -->
 
 などが挙げられます。公式的には、2，3が想定用途っぽいです (参考: [3. データモデル](https://docs.python.org/ja/3/reference/datamodel.html#basic-customization))。
 

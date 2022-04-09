@@ -5,7 +5,7 @@ description: SRAからfastqファイルをダウンロードする時の関連�
 lang: ja
 category: bioinformatics
 created_at: 2021/11/16
-updated_at: 2021/11/16
+updated_at: 2022/04/09
 ---
 
 ## TL;DR
@@ -47,7 +47,7 @@ vdb-config -i
 
 <RecommendPost
     title="SRAにAsperaを使ってデータをアップロードする"
-    url="/posts/bioinformatics/sra_upload_aspera"
+    url="/techblog/posts/sra_upload_aspera"
     category="bioinformatics"
     description="httpやftpによるSRAへのデータアップロードは遅すぎるので、IBMのaspera connectを使ってデータをアップロードするやり方を使おう。"
 />
