@@ -5,7 +5,7 @@ description: Markdown内のコードをフォーマットしたいので、作�
 lang: ja
 category: rust
 created_at: 2021/07/17
-updated_at: 2021/09/29
+updated_at: 2022/04/09
 ---
 
 ## TL;DR
@@ -17,7 +17,6 @@ updated_at: 2021/09/29
 
 そこで、今回はMarkdown内のコードを任意のフォーマッターを使って整形して出力するツール**cmfmt**を作ったので宣伝します。
 
-<!-- [![illumination-k/cmfmt - GitHub](https://gh-card.dev/repos/illumination-k/cmfmt.svg)](https://github.com/illumination-k/cmfmt) -->
 
 ![github:illumination-k/cmfmt](github:illumination-k/cmfmt)
 
@@ -25,7 +24,7 @@ updated_at: 2021/09/29
 
 binaryをおいてあるので、ダウンロードしてパスを通したあと`cmfmt example.md`の用な感じで使えます。デフォルトではファイルを置き換えてしまうので、それが嫌な場合は`--stdout`フラグをつければ置き換える代わりに標準出力に出力されます。
 
-```
+```bash
 USAGE:
     cmfmt [FLAGS] [OPTIONS] <markdown>
 

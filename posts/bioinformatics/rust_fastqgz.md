@@ -5,14 +5,14 @@ description: rust-bioを使ってfastq/fastq.gzを読み書きします。
 lang: ja
 category: bioinformatics
 created_at: 2020/12/26
-updated_at: 2021/09/29
+updated_at: 2022/04/09
 ---
 
 ## TL;DR
 
-fastqとかのファイルを処理するときに、Pythonだとサイズが大きめのfastqファイル群を扱ってると時間がかかりすぎて辛い気分になります。fastqをパースするくらいなら自前で書いてもいいんですが、[rust-bio]()なるcrateがあるのでそれを使います。
+fastqとかのファイルを処理するときに、Pythonだとサイズが大きめのfastqファイル群を扱ってると時間がかかりすぎて辛い気分になります。fastqをパースするくらいなら自前で書いてもいいんですが、[rust-bio](https://github.com/rust-bio/rust-bio)なるcrateがあるのでそれを使います。
 
-使い方は[docs](https://docs.rs/bio/0.32.0/bio/)読めばわかるんですが、gz形式で読み書きするのがrust-bio単独では使えなかったので、そのあたりもフォローしておきます。
+使い方は[docs](https://docs.rs/bio/latest/bio/index.html)読めばわかるんですが、gz形式で読み書きするのがrust-bio単独では使えなかったので、そのあたりもフォローしておきます。
 
 ## dependencies
 
@@ -46,7 +46,7 @@ pub struct Record {
 
 ### Reader
 
-[docs](https://docs.rs/bio/0.32.0/bio/io/fastq/index.html)のほぼコピペを貼ります。
+[docs](https://docs.rs/bio/latest/bio/io/fastq/index.html)のほぼコピペを貼ります。
 
 
 ```rust
@@ -81,7 +81,7 @@ let mut reader = fastq::Reader::from_file(path).unwrap();
 
 ### Write
 
-[docs](https://docs.rs/bio/0.32.0/bio/io/fastq/index.html)のほぼコピペを再び貼ります。
+[docs](https://docs.rs/bio/latest/bio/io/fastq/index.html)のほぼコピペを再び貼ります。
 
 ```rust
 use std::io;

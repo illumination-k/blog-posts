@@ -5,7 +5,7 @@ description: NGSライブラリ調製の際には多様な反応が使用され�
 lang: ja
 category: biology
 created_at: 2021/01/03
-updated_at: "2022-04-08T00:23:18+00:00"
+updated_at: "2022-04-09T12:31:07+00:00"
 ---
 
 ## TL;DR
@@ -101,7 +101,7 @@ cDNAは一本鎖DNAなわけですが、基本的には二本鎖DNAのほうが�
 
 Transposonの一種であるTn5を用いる反応です。DNAをランダムにフラグメントにします。Tn5にはモザイク配列と呼ばれる活性化配列と、それに繋がったアダプター配列を付加した2本鎖配列がロードされています。
 
-![tn5_dimer](https://teichlab.github.io/scg_lib_structs/data/tn5_dimer.svg)
+![[md={6}:tn5_dimer](https://teichlab.github.io/scg_lib_structs/data/tn5_dimer.svg)
 
 そして、切断された部分の両端にモザイク配列+アダプター配列を付加できます。そのアダプター配列に相補的な配列を持つプライマーを用いて増幅することでライブラリを作成できます。
 

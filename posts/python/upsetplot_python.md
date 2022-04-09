@@ -5,7 +5,7 @@ description: 集合関係の包含関係を示すとき、ベン図より使い�
 lang: ja
 category: python
 created_at: 2021/08/27
-updated_at: 2021/09/29
+updated_at: 2022/04/09
 ---
 
 ## TL;DR
@@ -20,19 +20,19 @@ Rでの実装例は[こちらのサイト](https://stats.biopapyrus.jp/r/graph/u
 
 まず、ベン図とUpset Plotが比較されている図を見てみます。
 
-![md={6}:upsetplot_venn](/images/upsetplot/upsetplot_venn.gif)
+![md={6}:upsetplot_venn](../../public/upsetplot/upsetplot_venn.gif)
 図1. venn図とupsetplot(Lex et al., 2014 Fig. 4)
 
 3つくらいだと一長一短という感じです。集合の量的関係を見る文にはUpset Plotのほうが向いていそうです。
 
 また、upsetplotのメリットは、拡張性が高いということです。というのは、集合関係を行で表しているため、その行に別のデータを挿入できます。例えば以下のように拡張できます。
 
-![upsetplot_extensions](/images/upsetplot/upsetplot_extensions.gif)
+![upsetplot_extensions](../../public/upsetplot/upsetplot_extensions.gif)
 図2. upsetplotの拡張性(Lex et al., 2014 Fig. 1)
 
 また、集合間の量的関係を表すため、集合に属する数によってソートをかけるといったことも可能です。もちろん、拡張したデータに対してソートできます。
 
-![md={8}:upsetplot_sort](/images/upsetplot/upsetplot_sort.gif)
+![md={8}:upsetplot_sort](../../public/upsetplot/upsetplot_sort.gif)
 図3. upsetplotのソート(Lex et al., 2014 Fig. 6)
 
 ## Pythonによる実装
@@ -81,7 +81,7 @@ plt.show()
 ```
 
 **出力**
-![md={4}:venn](/images/upsetplot/venn.png)
+![md={4}:venn](../../public/upsetplot/venn.png)
 
 量が歪だと少しわかりにくいです。
 
@@ -98,7 +98,8 @@ plt.show()
 ```
 
 **出力**
-![md={6}:upsetplot_basic](/images/upsetplot/upsetplot_basic.png)
+
+![md={6}:upsetplot_basic](../../public/upsetplot/upsetplot_basic.png)
 
 量的関係と集合関係を分離させることで、量的関係の視覚的な理解が容易くなっています。逆に集合関係は少し理解が難しくなります。
 
@@ -110,9 +111,9 @@ plot(examples, sort_by="cardinality", show_counts="%d")
 plt.show()
 ```
 
-![md={6}:upsetplot_basic_orientation](/images/upsetplot/upsetplot_basic_orientation.png)
+![md={6}:upsetplot_basic_orientation](../../public/upsetplot/upsetplot_basic_orientation.png)
 
-![md={6}:upsetplot_basic_sort](/images/upsetplot/upsetplot_basic_sort.png)
+![md={6}:upsetplot_basic_sort](../../public/upsetplot/upsetplot_basic_sort.png)
 
 ### Upset Plotの拡張
 
@@ -157,7 +158,7 @@ upset.plot()
 plt.show()
 ```
 
-![upsetplot_ext_python](/images/upsetplot/upsetplot_ext_python.png)
+![upsetplot_ext_python](../../public/upsetplot/upsetplot_ext_python.png)
 
 ### カテゴリのリストからUpset Plotを作成する
 
@@ -186,7 +187,7 @@ upset_data = upset_data.set_index(list(upset_data.columns))
 upsetplot.plot(upset_data, subset_size="count", show_counts="%d", sort_categories_by=None)
 ```
 
-![md={6}:upsetplot_category_examples](/images/upsetplot/upsetplot_category_examples.png)
+![md={6}:upsetplot_category_examples](../../public/upsetplot/upsetplot_category_examples.png)
 
 慣れてしまえばデータフレーム操作は簡単ですが、最初結構戸惑ったのでメモ代わりに残しておきます。最初にTrueで初期化するのが重要です。
 

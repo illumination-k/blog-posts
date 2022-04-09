@@ -5,7 +5,7 @@ description: rustにも実はpandas likeなcrateがあることを知ったの�
 lang: ja
 category: rust
 created_at: 2021/01/09
-updated_at: "2022-04-08T00:35:01+00:00"
+updated_at: "2022-04-08T17:05:16+00:00"
 ---
 
 ## TL;DR
