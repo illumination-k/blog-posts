@@ -7,8 +7,8 @@
       "segment_id": "e1c1f7e2-edcd-433a-a7fb-0c7369d5b8e3",
       "max_doc": 58,
       "deletes": {
-        "num_deleted_docs": 7,
-        "opstamp": 515
+        "num_deleted_docs": 8,
+        "opstamp": 518
       }
     },
     {
@@ -18,6 +18,11 @@
     },
     {
       "segment_id": "657ef639-f4a0-407f-b800-9cb7b182b1f5",
+      "max_doc": 1,
+      "deletes": null
+    },
+    {
+      "segment_id": "66055443-10ae-4c4f-aa7b-cd027dda0687",
       "max_doc": 1,
       "deletes": null
     },
@@ -188,5 +193,5 @@
       }
     }
   ],
-  "opstamp": 515
+  "opstamp": 521
 }
