@@ -6,7 +6,7 @@
   "license": "MIT",
   "husky": {
     "hooks": {
-      "pre-push": "yarn prep"
+      "pre-commit": "yarn prep"
     }
   },
   "devDependencies": {
