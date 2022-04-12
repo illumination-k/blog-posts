@@ -5,7 +5,7 @@ description: 知っておくと便利そうなbash知識をまとめていきま
 lang: ja
 category: misc
 created_at: 2021/06/29
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

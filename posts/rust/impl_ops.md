@@ -5,7 +5,7 @@ description: 構造体に対して演算子を実装するときに、マクロ�
 lang: ja
 category: rust
 created_at: 2021/08/01
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

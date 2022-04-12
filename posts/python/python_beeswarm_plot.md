@@ -5,7 +5,7 @@ description: 統計要約量とかを特に考慮せずに、ただデータを�
 lang: ja
 category: python
 created_at: 2021/08/27
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

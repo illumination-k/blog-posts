@@ -5,7 +5,7 @@ description: Actix-webを使ってみたかったので、DieselのGetting Start
 lang: ja
 category: rust
 created_at: 2021/07/19
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

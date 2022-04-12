@@ -5,7 +5,7 @@ description: Github Actionsとcrossを使ってReleaseでクロスコンパイ�
 lang: ja
 category: rust
 created_at: 2020/10/08
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

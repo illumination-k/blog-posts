@@ -5,7 +5,7 @@ description: rustで覚えておきたいことのメモ
 lang: ja
 category: rust
 created_at: 2021/07/17
-updated_at: 2022/04/09
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

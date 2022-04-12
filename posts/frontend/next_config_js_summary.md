@@ -5,7 +5,7 @@ description: next.jsを使っているとnext.config.jsを使って設定をカ�
 lang: ja
 category: frontend
 created_at: 2021/06/28
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

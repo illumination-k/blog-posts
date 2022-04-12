@@ -5,7 +5,7 @@ description: GATK4は実行に時間がかかるツールですが、マシン�
 lang: ja
 category: bioinformatics
 created_at: 2020/09/28
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

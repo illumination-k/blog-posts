@@ -6,7 +6,7 @@
   "license": "MIT",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prep"
+      "pre-push": "dprint fmt && yarn prep && git add . --all && git commit -m 'auto precommit'"
     }
   },
   "devDependencies": {

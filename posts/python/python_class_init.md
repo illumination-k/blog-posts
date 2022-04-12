@@ -5,7 +5,7 @@ description: PythonのClassは色々難しいので、勉強のためにまと�
 lang: ja
 category: python
 created_at: 2021/06/29
-updated_at: 2022/04/09
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

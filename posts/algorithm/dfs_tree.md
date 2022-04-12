@@ -5,7 +5,7 @@ description: rustで木上のDFSとDFS木
 lang: ja
 category: algorithm
 created_at: 2021/08/27
-updated_at: "2022-04-05T19:13:06+00:00"
+updated_at: "2022-04-12T15:33:22+00:00"
 ---
 
 ## TL;DR

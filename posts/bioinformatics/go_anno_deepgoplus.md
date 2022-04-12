@@ -5,7 +5,7 @@ description: 自然言語処理技術では深層学習技術が非常に良い�
 lang: ja
 category: bioinformatics
 created_at: 2021/04/11
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

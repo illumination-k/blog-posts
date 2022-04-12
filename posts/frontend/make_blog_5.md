@@ -5,7 +5,7 @@ description: Next.jsで作ってみたブログに形態素解析とflexsearch�
 lang: ja
 category: frontend
 created_at: 2020/09/14
-updated_at: 2021/11/06
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

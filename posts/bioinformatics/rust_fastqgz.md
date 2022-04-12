@@ -5,7 +5,7 @@ description: rust-bioを使ってfastq/fastq.gzを読み書きします。
 lang: ja
 category: bioinformatics
 created_at: 2020/12/26
-updated_at: 2022/04/09
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

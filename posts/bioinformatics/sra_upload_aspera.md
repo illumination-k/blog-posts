@@ -5,7 +5,7 @@ description: httpやftpによるSRAへのデータアップロードは遅すぎ
 lang: ja
 category: bioinformatics
 created_at: 2021/09/11
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

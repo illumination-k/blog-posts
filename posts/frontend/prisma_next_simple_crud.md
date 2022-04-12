@@ -5,7 +5,7 @@ description: O/Rマッパとしてprismaを使用して、簡単なCRUDをNext.j
 lang: ja
 category: frontend
 created_at: 2021/11/09
-updated_at: 2021/11/09
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

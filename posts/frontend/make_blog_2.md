@@ -5,7 +5,7 @@ description: ブログ記事を書くのに、MDXを使うのか、Markdownを�
 lang: ja
 category: frontend
 created_at: 2020/09/07
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

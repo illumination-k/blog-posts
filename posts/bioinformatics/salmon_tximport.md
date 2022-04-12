@@ -5,7 +5,7 @@ description: salmonの出力ファイルはquant.sfですが、その加工は�
 lang: ja
 category: bioinformatics
 created_at: 2021/01/19
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

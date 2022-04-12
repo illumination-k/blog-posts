@@ -5,7 +5,7 @@ description: next.jsで作ってみたブログにtypescriptとmaterial-uiと一
 lang: ja
 category: frontend
 created_at: 2020/09/29
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

@@ -5,7 +5,7 @@ description: RustでLinkedListを実装してみました。
 lang: ja
 category: rust
 created_at: 2021/08/09
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL;DR

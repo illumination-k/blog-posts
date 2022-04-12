@@ -5,7 +5,7 @@ description: matplotlibを使っていて、colorbarだけ作りたいとき、�
 lang: ja
 category: python
 created_at: 2020/09/26
-updated_at: "2022-04-08T00:23:19+00:00"
+updated_at: "2022-04-12T15:34:08+00:00"
 ---
 
 ## TL;DR

@@ -5,7 +5,7 @@ description: マンハッタン距離に関するメモ
 lang: ja
 category: algorithm
 created_at: 2021/08/27
-updated_at: "2022-04-05T19:13:07+00:00"
+updated_at: "2022-04-12T15:33:26+00:00"
 ---
 
 ## TL;DR

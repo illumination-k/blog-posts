@@ -5,7 +5,7 @@ description: RustでJupyter環境を構築して、rust-analyzerで補完でき�
 lang: ja
 category: rust
 created_at: 2021/12/14
-updated_at: "2022-04-08T00:23:19+00:00"
+updated_at: "2022-04-12T15:34:17+00:00"
 ---
 
 ## TL;DR

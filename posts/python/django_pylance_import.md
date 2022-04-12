@@ -5,7 +5,7 @@ description: Pylanceは非常に優れたコーディング支援拡張機能で
 lang: ja
 category: python
 created_at: 2021/02/17
-updated_at: 2021/09/29
+updated_at: 2022/04/12
 ---
 
 ## TL; DR

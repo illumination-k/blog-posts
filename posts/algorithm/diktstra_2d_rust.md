@@ -5,7 +5,7 @@ description: 二次元平面上でダイクトストラやりたいってとき�
 lang: ja
 category: algorithm
 created_at: 2021/08/27
-updated_at: "2022-04-09T14:00:05+00:00"
+updated_at: "2022-04-12T15:33:23+00:00"
 ---
 
 ## TL;DR
