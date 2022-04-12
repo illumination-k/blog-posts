@@ -5,7 +5,7 @@
   "markdown": {},
   "toml": {},
   "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,rs,py}"],
-  "excludes": ["**/node_modules", "**/*-lock.json"],
+  "excludes": ["**/node_modules", "**/*-lock.json", "**/index"],
   "exec": {
     "associations": "**/*.{rs,py}",
     "rustfmt": "rustfmt",
