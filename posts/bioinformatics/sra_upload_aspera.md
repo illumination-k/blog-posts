@@ -39,4 +39,3 @@ your_submission_directory="<user@email.com_xxxxx"
 
 ascp -i ~/.aspera/keys/aspera_rsa -QT -l 100m -k1 -d path/to/your_reads.fastq.gz subasp@upload.ncbi.nlm.nih.gov:uploads/${your_submission_directory}
 ```
-

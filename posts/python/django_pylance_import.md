@@ -9,6 +9,7 @@ updated_at: 2021/09/29
 ---
 
 ## TL; DR
+
 Pylanceは非常に優れたコーディング支援拡張機能ですが、importがよく解決されなくて困っていました。小規模開発のときはまあいいか、と思ったりするのですが、djangoとかで解決されないと結構手間なので、解決法を調べたら解決したので書いておきます。
 
 ## 状況
@@ -63,7 +64,7 @@ from app1 import models
 from ..app1 import models
 ```
 
-Pylanceは警告を出さなくなります。補完も効きます。  
+Pylanceは警告を出さなくなります。補完も効きます。
 
 しかし、いざdjangoを起動させようとすると`ValueError: attempted relative import beyond top-level package`が起こります。
 

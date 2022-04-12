@@ -17,6 +17,7 @@ updated_at: "2022-04-09T14:00:05+00:00"
 プライオリティキュー(BinaryHeap)は、最大値のものから取り出されていくので、数えたい処理のときはマイナスの値にしてプライオリティキューに入れていけば、値が大きいものほど取り出されなくなる。BFSのときと同じようにdistを作っておいて、最初にdistの(x, y)に訪れたときに取り出されたものにマイナスをかけてdistに格納しておけば、distの(x, y)はその時点での最小値になる。なので、何らかの特殊な処理をした値の数を保存することができる。0-1BFSのようなものっぽい(0-1BFSがわかってない)。
 
 それはそうと[docs](https://doc.rust-lang.org/std/primitive.tuple.html)を読んで初めて知ったんですがrustのtupleのOrdは前から順番に大きさを評価していくんですね。
+
 > The sequential nature of the tuple applies to its implementations of various traits. For example, in PartialOrd and Ord, the elements are compared sequentially until the first non-equal set is found.
 
 ## 前提

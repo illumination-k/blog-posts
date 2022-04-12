@@ -72,7 +72,7 @@ Next.jsのPWA対応というと[next-offline](https://github.com/hanford/next-of
 [ここ](https://web.dev/apple-touch-icon/?utm_source=lighthouse&utm_medium=lr)を見てもらったほうが早いですが、PWA対応したいページのヘッダーに
 
 ```jsx
-<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />;
 ```
 
 を加えておきます。アイコンのサイズは192x192か180x180である必要があります。
@@ -135,7 +135,7 @@ PWA対応したいコンポーネントのbodyに以下を入れます。
     src="/serviceworker.js"
     data-iframe-src="/install-serviceworker.html"
     layout="nodisplay"
-/>
+/>;
 ```
 
 ### offlineページの作成

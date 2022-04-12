@@ -18,8 +18,7 @@ rustにも実はpandas likeなcrateがあることを知ったのでpandasとの
 
 ![jupyter-image](../../public/polars_pandas/jupyter_image.PNG)
 
-
-ただ補完や型の推測が効かないので少し困りました。`rust-analyzer`対応もしてみました。補完は効くようになりましたが、やはりVSCodeなどに比べると微妙。  
+ただ補完や型の推測が効かないので少し困りました。`rust-analyzer`対応もしてみました。補完は効くようになりましたが、やはりVSCodeなどに比べると微妙。\
 サンプルノートブックはこちら。docker-composeで起動できます。
 
 ![github:illumination-k/polars-pandas](github:illumination-k/polars-pandas)
@@ -79,51 +78,51 @@ print(pd.__version__)
 <details>
 <summary>numberとSeries</summary>
 
-| 演算名 | vs number |
-| ------ | --------- |
-| `add`    | `s + 1`   |
-| `sub`    | `s - 1`   |
-| `div`    | `s / 1`   |
-| `mul`    | `s * 1`   |
+| 演算名   | vs number |
+| ----- | --------- |
+| `add` | `s + 1`   |
+| `sub` | `s - 1`   |
+| `div` | `s / 1`   |
+| `mul` | `s * 1`   |
 
 </details>
 
 <details>
 <summary>SeriesとSeries</summary>
 
-| 演算名 | 操作                  |
-| ------ | --------------------- |
-| `add`    | `&s1 + &s2`           |
-| `sub`    | `&s1 - &s2`           |
-| `div`    | `&s1 / &s2`           |
-| `mul`    | `&s1 * &s2`           |
-| `mod`    | `&s1 % &s2`           |
-| `eq`     | `s1.series_equal(s2)` |
+| 演算名   | 操作                    |
+| ----- | --------------------- |
+| `add` | `&s1 + &s2`           |
+| `sub` | `&s1 - &s2`           |
+| `div` | `&s1 / &s2`           |
+| `mul` | `&s1 * &s2`           |
+| `mod` | `&s1 % &s2`           |
+| `eq`  | `s1.series_equal(s2)` |
 
 </details>
 
 <details>
 <summary>DataFrameとSeries</summary>
 
-| 演算名 | 操作       |
-| ------ | ---------- |
-| `add`    | `&df + &s` |
-| `sub`    | `&df - &s` |
-| `div`    | `&df / &s` |
-| `mul`    | `&df * &s` |
-| `mod`    | `&df % &s` |
+| 演算名   | 操作         |
+| ----- | ---------- |
+| `add` | `&df + &s` |
+| `sub` | `&df - &s` |
+| `div` | `&df / &s` |
+| `mul` | `&df * &s` |
+| `mod` | `&df % &s` |
 
 </details>
 
 <details>
 <summary>Seriesの演算</summary>
 
-| 演算名 | 操作          |
-| ------ | ------------- |
-| sum    | `s.sum<T>()`  |
-| max    | `s.max<T>()`  |
-| min    | `s.min<T>()`  |
-| mean   | `s.mean<T>()` |
+| 演算名  | 操作            |
+| ---- | ------------- |
+| sum  | `s.sum<T>()`  |
+| max  | `s.max<T>()`  |
+| min  | `s.min<T>()`  |
+| mean | `s.mean<T>()` |
 
 </details>
 
@@ -132,7 +131,7 @@ print(pd.__version__)
 
 Series同士、Seriesとnumberを比較できる
 
-| 演算 | vs Series          | vs number         |
+| 演算   | vs Series          | vs number         |
 | ---- | ------------------ | ----------------- |
 | `=`  | `s1.equal(s2)`     | `s1.equal(1)`     |
 | `!=` | `s1.not_equal(s2)` | `s1.not_equal(1)` |
@@ -146,7 +145,7 @@ Series同士、Seriesとnumberを比較できる
 <details>
 <summary>DataFrameの演算</summary>
 
-| 演算名 | 操作          |
+| 演算名    | 操作            |
 | ------ | ------------- |
 | sum    | `df.sum()`    |
 | max    | `df.max()`    |
@@ -287,9 +286,9 @@ df["F"] = df["B"].map(lambda x: x * 2)
 df = df.assign(G = lambda df: df.B * 2)
 ```
 
-polarsのcolumの追加は`with_column`関数や`replace_or_add`関数で行える。  
-assignみたいないい感じの関数が見つからなかった。四則演算や簡単な演算はSeriesにして計算すればいける。`to_owned()`2回やってるの解消できる気がするけどできなかった。  
-無名関数を使いたい際には、一端`ChunkedArray`に変換してからapplyやmapを使う。`Series`は型を持たないが、`ChunkedArray`は型があるので演算ができる。  
+polarsのcolumの追加は`with_column`関数や`replace_or_add`関数で行える。\
+assignみたいないい感じの関数が見つからなかった。四則演算や簡単な演算はSeriesにして計算すればいける。`to_owned()`2回やってるの解消できる気がするけどできなかった。\
+無名関数を使いたい際には、一端`ChunkedArray`に変換してからapplyやmapを使う。`Series`は型を持たないが、`ChunkedArray`は型があるので演算ができる。\
 `DataFrame`構造体には`apply`が存在しているが、`&mut self`なので、本体が変わってしまう。なので`select`か`clone`してからみたいな処理になるけどどっちが早いのだろうか。
 
 ```rust

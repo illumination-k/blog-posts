@@ -90,6 +90,7 @@ ENV LC_ALL=C
 特にREADMEには書いてないけど、入ってないとエラーになります。あとmakeのときに`/usr/include/numpy`に必要ファイルがないって怒られるので、シンボリックリンクを貼っています。
 
 ### 環境変数
+
 `/cellranger/sourceme.bash` と `/cellranger/ranger-3.0.2/sourceme.bash`を`source`すればいいです。ENTRYPOINT使えば楽なんですが、`singularity`のイメージに変換するのでやめました（singularityってENTRYPOINTも解釈してくれるんですか？）
 
 ## ソースコードの改変

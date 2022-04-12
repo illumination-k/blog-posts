@@ -9,6 +9,7 @@ updated_at: 2021/09/29
 ---
 
 ## TL;DR
+
 GATK4は実行に時間がかかるツールですが、マシンパワーさえあればsplit intervalを使って高速化できます。split intervalについては日本語文献が見つからなかったのでまとめておきます。Sparkを使った実装も進められているようでうが、まだ全てに対応しているわけではないようです(2020/09/28現在)。
 
 ## split intervalディレクトリの作成
@@ -97,7 +98,7 @@ picard \
 ## 参考
 
 - [A guide to GATK4
-best practice pipeline
-performance and
-optimization on the IBM
-OpenPOWER system](https://www.ibm.com/downloads/cas/ZJQD0QAL)
+  best practice pipeline
+  performance and
+  optimization on the IBM
+  OpenPOWER system](https://www.ibm.com/downloads/cas/ZJQD0QAL)

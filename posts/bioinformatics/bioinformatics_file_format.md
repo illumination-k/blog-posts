@@ -52,12 +52,12 @@ IENY
 
 #### fastaフォーマットを扱うツール
 
-|tool name|description|
-|---|---|
-|[seqkit](https://bioinf.shenwei.me/seqkit/)|基本的になんでもできる。GOで書かれていて、マルチスレッドにも対応しており高速|
-|[samtools](http://samtools.sourceforge.net)|faidxの作成とか、sam/bamをfastaに変換したりなど|
-|[picard](https://broadinstitute.github.io/picard/)|dictの作成|
-|[bedtools](https://bedtools.readthedocs.io/en/latest/)|bedの情報から配列を抜くときなどに使う|
+| tool name                                              | description                             |
+| ------------------------------------------------------ | --------------------------------------- |
+| [seqkit](https://bioinf.shenwei.me/seqkit/)            | 基本的になんでもできる。GOで書かれていて、マルチスレッドにも対応しており高速 |
+| [samtools](http://samtools.sourceforge.net)            | faidxの作成とか、sam/bamをfastaに変換したりなど        |
+| [picard](https://broadinstitute.github.io/picard/)     | dictの作成                                 |
+| [bedtools](https://bedtools.readthedocs.io/en/latest/) | bedの情報から配列を抜くときなどに使う                    |
 
 ### fastq
 
@@ -96,22 +96,22 @@ SAM/BAMに変換する際には、以下のようなMapping Toolが使われて�
 
 ##### bulk NGS sequence
 
-|tool name|description|
-|---|---|
-|[bwa](http://bio-bwa.sourceforge.net)|Whole Genome Sequence, ChiP-Seq, ATAC-seq etc.,|
-|[bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)|Whole Genome Sequence, Chip-Seq, ATAC-seq etc.,|
-|[hisat2](http://daehwankimlab.github.io/hisat2/)|RNA-seq、STARと比べると省メモリ|
-|[STAR](https://github.com/alexdobin/STAR)|RNA-seq、メモリが結構必要、gatkなどの変異検出の際には推奨されている。quantmodeが存在し、発現量の定量も行ってくれる。|
-|[Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/)|Bisulfite Sequence|
+| tool name                                                              | description                                                          |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [bwa](http://bio-bwa.sourceforge.net)                                  | Whole Genome Sequence, ChiP-Seq, ATAC-seq etc.,                      |
+| [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)       | Whole Genome Sequence, Chip-Seq, ATAC-seq etc.,                      |
+| [hisat2](http://daehwankimlab.github.io/hisat2/)                       | RNA-seq、STARと比べると省メモリ                                                |
+| [STAR](https://github.com/alexdobin/STAR)                              | RNA-seq、メモリが結構必要、gatkなどの変異検出の際には推奨されている。quantmodeが存在し、発現量の定量も行ってくれる。 |
+| [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/) | Bisulfite Sequence                                                   |
 
 その他にリードの分割やダウンサンプリングなどを行いたい場合にはfastaで紹介したような[seqkit](https://bioinf.shenwei.me/seqkit/)などが有用です。マージは`cat`とかでいいです。小ネタとして`gzip`形式のものでもcatでマージできます。
 
 bulkのRNA-seqでは以下のようなツールでSAM/BAMを介さずそのまま発現量テーブルを作成でます。また、これらのツールのほうが精度は高いらしいです。
 
-|tool name|description|
-|---|---|
-|salmon|高精度、高速をウリにしています。個人的によく使ってます。|
-|kalisto|Salmonと一緒です。いまいち違いは分かっていません。|
+| tool name | description                  |
+| --------- | ---------------------------- |
+| salmon    | 高精度、高速をウリにしています。個人的によく使ってます。 |
+| kalisto   | Salmonと一緒です。いまいち違いは分かっていません。 |
 
 この辺はCSVとかわかりやすい形式ではなく、よくわからない形式で出力されるのでR packageの[tximport](https://bioconductor.org/packages/release/bioc/html/tximport.html)などを使ってテーブル形式に変換します。変換の仕方などは[こちら](https://bi.biopapyrus.jp/rnaseq/analysis/de-analysis/tximport.html)が参考になります。
 
@@ -119,13 +119,13 @@ bulkのRNA-seqでは以下のようなツールでSAM/BAMを介さずそのま�
 
 scRNA-seqを扱う場合には、それ専用のツールがまたいろいろありますが、代表的なものとしては以下のようなものがあります。
 
-|tool name|description|
-|---|---|
-|[UMI-tools](https://github.com/CGATOxford/UMI-tools)|もともとはUMIを扱うために作られたツール。正規表現でバーコードを扱うので、基本的になんでも扱える。MappingなどはSTARなど他のツールを使って行う必要がある。drop-seqとかsmart-seqとかのときに使えます。|
-|[kalisto](https://pachterlab.github.io/kallisto/singlecell.html)|bulkのRNA-seq解析でも使うツール。scRNA-seqも扱えるらしい|
-|[Alevin](https://salmon.readthedocs.io/en/latest/alevin.html)|Salmonの開発元が提供しているscRNA-seqのための発現量定量ツール。UMI-Toolsよりはこっちが推奨されている|
-|[STAR-solo](https://f1000research.com/posters/8-1896)|STARの開発元が提供しているscRNA-seqのためのMapping Tool。Cellrangerと同一のアルゴリズムを使っていてCellRangerよりかなり早いらしい。|
-|[cellranger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)|10x Genomicsが提供しているツール。基本的に全部やってくれる。|
+| tool name                                                                                                               | description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| [UMI-tools](https://github.com/CGATOxford/UMI-tools)                                                                    | もともとはUMIを扱うために作られたツール。正規表現でバーコードを扱うので、基本的になんでも扱える。MappingなどはSTARなど他のツールを使って行う必要がある。drop-seqとかsmart-seqとかのときに使えます。 |
+| [kalisto](https://pachterlab.github.io/kallisto/singlecell.html)                                                        | bulkのRNA-seq解析でも使うツール。scRNA-seqも扱えるらしい                                                                            |
+| [Alevin](https://salmon.readthedocs.io/en/latest/alevin.html)                                                           | Salmonの開発元が提供しているscRNA-seqのための発現量定量ツール。UMI-Toolsよりはこっちが推奨されている                                                    |
+| [STAR-solo](https://f1000research.com/posters/8-1896)                                                                   | STARの開発元が提供しているscRNA-seqのためのMapping Tool。Cellrangerと同一のアルゴリズムを使っていてCellRangerよりかなり早いらしい。                          |
+| [cellranger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger) | 10x Genomicsが提供しているツール。基本的に全部やってくれる。                                                                              |
 
 ##### miRNA-seq
 
@@ -175,11 +175,11 @@ duplicate readの除去や、マッピングクオリティによるフィルタ
 
 RNA-seqを行った後に行う代表的な解析は、発現量の定量です。ツールとしては色々ありますが、代表的そうなものを紹介します。cuffdiffなんかは有名ですが使用は推奨されていないようです。
 
-|tool name|description|
-|---|---|
-|[featureCount](http://subread.sourceforge.net)|GFF/GFTデータをもとにカウントしてくれます。最近kalistoの作者が推奨しないツイートをしたみたいなのを聞いたのですが、ソースがあれば教えてください|
-|[RSEM](https://github.com/deweylab/RSEM)|bowtie2とSTARを使ってカウントまでやってくれます。BAMも出力するのですが、入れるべき場所がわからなかったのでここで紹介しておきます。GFF/GTFが必要です。|
-|[salmon](https://salmon.readthedocs.io/en/latest/salmon.html#quantifying-in-alignment-based-mode)|alginment based modeを使えばbamからカウントもできます。fastaが必要です。|
+| tool name                                                                                         | description                                                                           |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [featureCount](http://subread.sourceforge.net)                                                    | GFF/GFTデータをもとにカウントしてくれます。最近kalistoの作者が推奨しないツイートをしたみたいなのを聞いたのですが、ソースがあれば教えてください        |
+| [RSEM](https://github.com/deweylab/RSEM)                                                          | bowtie2とSTARを使ってカウントまでやってくれます。BAMも出力するのですが、入れるべき場所がわからなかったのでここで紹介しておきます。GFF/GTFが必要です。 |
+| [salmon](https://salmon.readthedocs.io/en/latest/salmon.html#quantifying-in-alignment-based-mode) | alginment based modeを使えばbamからカウントもできます。fastaが必要です。                                    |
 
 #### 遺伝子アノテーション (bam -> gff/gtf)
 
@@ -187,11 +187,11 @@ RNA-seqを行った後に行う代表的な解析は、発現量の定量です�
 
 SAM/BAMフォーマットからVariant Call Format(VCF)に変換するステップと考えてもいいです。基本的にはSNVの検出を想定しており、SVなどは考慮していません。よく使われていそうなツールは以下のようなものがあります。
 
-|tool name|description|
-|---|---|
-|[bcftools](http://samtools.github.io/bcftools/bcftools.html)|mpileupコマンドでSNVの検出ができます。BAQ補正をすることでFPが出にくいらしいです|
-|[freebayes](https://github.com/ekg/freebayes)|使ったことがないのですが、ベイズ推定してるはずです。GATKもそうですが...。
-|[gatk](https://gatk.broadinstitute.org/hc/en-us)|多分一番有名なツールです。非常に処理が煩雑です|
+| tool name                                                    | description                                     |
+| ------------------------------------------------------------ | ----------------------------------------------- |
+| [bcftools](http://samtools.github.io/bcftools/bcftools.html) | mpileupコマンドでSNVの検出ができます。BAQ補正をすることでFPが出にくいらしいです |
+| [freebayes](https://github.com/ekg/freebayes)                | 使ったことがないのですが、ベイズ推定してるはずです。GATKもそうですが...。        |
+| [gatk](https://gatk.broadinstitute.org/hc/en-us)             | 多分一番有名なツールです。非常に処理が煩雑です                         |
 
 GATKに関する処理について、公式以外で役に立ちそうなリンクを貼っておきます。
 
@@ -201,11 +201,11 @@ GATKに関する処理について、公式以外で役に立ちそうなリン�
 
 ChIP-seqなどではリードが集中した領域をピークとして扱うことが多いです。この時もBAMから何らかのフォーマットへの変換が行われます。たいていはbedに準ずる形式へと変換されます。代表的なツールは以下のようなものがあります。また、転写因子に関するChIPでは狭いピークが、ヒストン修飾などのChIPでは広いピークが見られます。これらは、検出方法が異なるので、ツールやオプションを使い分ける必要があります。たいていbedかそれに準ずる形式のファイルに変換されます。
 
-|tool name|description|
-|---|---|
-|[MACS2](https://github.com/macs3-project/MACS)|一番多く使われている気がします。narrowなピークの検出によく使います。最近はbroadにも対応しているらしいです。|
-|[Homer](http://homer.ucsd.edu/homer/)|narrow、broad両方で使えます。そのあとのMotif enrichmentなどもできて便利です。pos形式という独自形式で出力されますが、`pos2bed.pl`みたいなbed形式の変換もサポートされています。|
-|[SICER2](https://zanglab.github.io/SICER2/)|broadなピークの検出に使えます。|
+| tool name                                      | description                                                                                                   |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [MACS2](https://github.com/macs3-project/MACS) | 一番多く使われている気がします。narrowなピークの検出によく使います。最近はbroadにも対応しているらしいです。                                                   |
+| [Homer](http://homer.ucsd.edu/homer/)          | narrow、broad両方で使えます。そのあとのMotif enrichmentなどもできて便利です。pos形式という独自形式で出力されますが、`pos2bed.pl`みたいなbed形式の変換もサポートされています。 |
+| [SICER2](https://zanglab.github.io/SICER2/)    | broadなピークの検出に使えます。                                                                                            |
 
 #### [htslib](https://github.com/samtools/htslib)
 
@@ -307,9 +307,9 @@ Bedの亜種っぽい感じです。ProbabilityやTranscriptomeなど連続性�
 
 遺伝子のアノテーションなどは基本的にこのフォーマットでまとまっていることが多いです。GFFにはversion2とversion3があり、微妙にフォーマットが違います。また、GFF/GTFを扱うツールとしては以下のようなものがあります。
 
-|tool name|description|
-|---|---|
-|[gffread](https://github.com/gpertea/gffread)|GFF/GTFの相互変換、bedへの変換、配列の抜き出しなど|
+| tool name                                     | description                    |
+| --------------------------------------------- | ------------------------------ |
+| [gffread](https://github.com/gpertea/gffread) | GFF/GTFの相互変換、bedへの変換、配列の抜き出しなど |
 
 #### GFF format
 
@@ -368,13 +368,13 @@ bigwigはwigをバイナリ化したものです。UCSC genome browserで可視�
 
 変異情報が格納されているフォーマットです。samtoolsと同じところがフォーマットを決定しており、現状はver4.2です。非常に情報量が多いフォーマットなので、詳細は[マニュアル](https://samtools.github.io/hts-specs/VCFv4.2.pdf)を参照してください。gvcfは変異がコールされていない、という情報を加えて含んでいます。gatkのワークフローで登場しますが、あまり解析には使わないイメージです。詳しくは[公式ページ](https://gatk.broadinstitute.org/hc/en-us/articles/360035531812-GVCF-Genomic-Variant-Call-Format)などを参照してください。また、vcfを扱うツールとしては以下のようなものが有名です。ただvcfに関してはプログラム組んで動かした方が早い気もします。
 
-|tool name|description|
-|---|---|
-|[bcftools](http://samtools.github.io/bcftools/bcftools.html)|mergeやsplit、intersectなどを行える。早い。|
-|[vcftools](http://vcftools.sourceforge.net/)|mergeやsplit、intersectなどをおこなえる。bcftoolsより多機能。|
-|[snpshift](http://snpeff.sourceforge.net/SnpSift.html)|変異のフィルタリングなど。vcflibでも似たようなことができる。Javaで書かれているのでC++で書かれているvcflibのほうが早い気がするがベンチマークなどはとっていない。|
-|[vcflib](https://github.com/vcflib/vcflib)|変異のフィルタリングなど。C++で書かれているので、高速そう。|
-|[snpeff](http://snpeff.sourceforge.net)|VCFにアノテーションを付け、各種集計を行う。|
+| tool name                                                    | description                                                                               |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| [bcftools](http://samtools.github.io/bcftools/bcftools.html) | mergeやsplit、intersectなどを行える。早い。                                                           |
+| [vcftools](http://vcftools.sourceforge.net/)                 | mergeやsplit、intersectなどをおこなえる。bcftoolsより多機能。                                              |
+| [snpshift](http://snpeff.sourceforge.net/SnpSift.html)       | 変異のフィルタリングなど。vcflibでも似たようなことができる。Javaで書かれているのでC++で書かれているvcflibのほうが早い気がするがベンチマークなどはとっていない。 |
+| [vcflib](https://github.com/vcflib/vcflib)                   | 変異のフィルタリングなど。C++で書かれているので、高速そう。                                                           |
+| [snpeff](http://snpeff.sourceforge.net)                      | VCFにアノテーションを付け、各種集計を行う。                                                                   |
 
 プログラミング言語として扱えるパッケージはいろいろありますが、htslibのWrapper系列は大体対応しています。タブ区切りのファイルなので、Pythonなら`pandas`等でも扱えます。他には、
 

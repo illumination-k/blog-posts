@@ -22,13 +22,13 @@ Name    Length  EffectiveLength TPM     NumReads
 
 上の5つの値を持っています。[公式Docs Ver1.40](https://salmon.readthedocs.io/en/latest/file_formats.html)を読むと、これらの値は以下のように定義されています。
 
-|名称|定義|
-|---|---|
-|Name|転写産物の名前。fastaのヘッダ行|
-|Length|転写産物の塩基長|
-|EffectiveLength|fragment distributionやsequence-specific、gc-fragment biasなどを考慮した`effective length`。TPMの計算とかに使われる。|
-|TPM|正しい意味でのTPM。この値をこの後の解析に使うことが推奨されている|
-|NumReads|salmonによって転写産物にマップされたリード数|
+| 名称              | 定義                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Name            | 転写産物の名前。fastaのヘッダ行                                                                               |
+| Length          | 転写産物の塩基長                                                                                         |
+| EffectiveLength | fragment distributionやsequence-specific、gc-fragment biasなどを考慮した`effective length`。TPMの計算とかに使われる。 |
+| TPM             | 正しい意味でのTPM。この値をこの後の解析に使うことが推奨されている                                                               |
+| NumReads        | salmonによって転写産物にマップされたリード数                                                                        |
 
 ## tximportでファイルを読み込む
 
@@ -75,7 +75,6 @@ gene_from_tx.exp <- summarizeToGene(tx.exp, tx2gene)
 workspaceは続いている感じです。
 読み込みはできたんですが、目的のものを取り出す操作が必要です。
 
-
 tximportに何が入っているかは`names(tximportObject)`で確認できます。
 
 ```r
@@ -85,6 +84,7 @@ names(tx.exp)
 ```
 
 中身は
+
 - abundance: TPM
 - counts: NumReads
 - length: EffectiveLength
@@ -103,12 +103,12 @@ scaledTPM <- gene.scaled$counts
 
 ちなみにですが、それぞれのscale方法は以下です。また、`tximportObject$counts`で得られるものは、サンプルごとにsumをとるとすべてNumReadsの総数と等しくなります。
 
-|名称|方法|
-|---|---|
-|`no`|simplesum|
-|`scaledTPM`|ライブラリサイズに補正|
-|`lengthScaledTPM`|転写産物の平均長を補正したライブラリサイズに補正|
-|`dtuScaledTPM`|転写産物の中央値長で補正したライブラリサイズに補正|
+| 名称                | 方法                        |
+| ----------------- | ------------------------- |
+| `no`              | simplesum                 |
+| `scaledTPM`       | ライブラリサイズに補正               |
+| `lengthScaledTPM` | 転写産物の平均長を補正したライブラリサイズに補正  |
+| `dtuScaledTPM`    | 転写産物の中央値長で補正したライブラリサイズに補正 |
 
 また`dtuScaledTPM`はDifferential Transcripts Usage (DTU) 解析のときに最も優れた補正方法らしいです。これらのscaleした値、もしくはそのままのカウントをDifferential Expression Gene (DEG) 解析などには用います。
 

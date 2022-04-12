@@ -84,7 +84,6 @@ SELECT id FROM A LIMIT 1
 SELECT id FROM A ORDER BY id OFFSET 1
 ```
 
-
 ### 変数定義
 
 `DECLARE`が必要？
@@ -133,10 +132,10 @@ SELECT gid, SUM(val) OVER (PARTITION BY gid ORDER BY val) FROM t
 
 開始位置、終了位置で使える変数は以下
 
-|name|description|
-|---|---|
-|CURRENT ROW|現在行|
-|UNBOUNDED PRECEDING|PARTITIONの最初|
-|UNBOUNDED FOLLOWING|PARTITIONの最後|
-|N(INT) PRECEDING|現在行のN行前|
-|N(INT) FOLLOWING|現在行のN行後|
+| name                | description  |
+| ------------------- | ------------ |
+| CURRENT ROW         | 現在行          |
+| UNBOUNDED PRECEDING | PARTITIONの最初 |
+| UNBOUNDED FOLLOWING | PARTITIONの最後 |
+| N(INT) PRECEDING    | 現在行のN行前      |
+| N(INT) FOLLOWING    | 現在行のN行後      |

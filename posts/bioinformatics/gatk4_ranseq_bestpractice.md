@@ -8,7 +8,6 @@ created_at: 2020/09/09
 updated_at: 2021/09/29
 ---
 
-
 ## TL;DR
 
 genomic sequenceと少しRNA-seqのパイプラインは違うので、メモを。基本的には一緒なのですが、

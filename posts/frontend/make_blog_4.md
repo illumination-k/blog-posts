@@ -8,7 +8,6 @@ created_at: 2020/09/09
 updated_at: 2021/09/29
 ---
 
-
 ## TL;DR
 
 markdownファイルやmdxファイルはそのままだと`<img>`タグなどを使う。さらにAMP下での数式のレンダリングやコードシンタクスに対応させることも出ない。なので、mdxのカスタムローダーを自作することでAMPに対応する。
@@ -85,7 +84,6 @@ function toMathml() {
 
 `image-size`というパッケージで簡単にサイズを取得できる。また、urlからサイズを取ってくるときが少しめんどうで、非同期処理を使えない。使ってしまうとparseが終わった後にやっとwidthとheightがわかる、みたいなことになるっぽい。このあたりしっかり理解しきれていないのだが、`sync-request`という同期処理でrequestするモジュールを使って強引に解決した。
 
-
 ** 注意 **
 ただ`sync-request`は非推奨らしいので([参考](https://designetwork.daichi703n.com/entry/2017/02/21/node-then-request))、使用する場合は自己責任で...。問題になってるのはクライアント側がクラッシュしやすくなるとかなので、buildするときに走るだけだから問題ないと思いたいのだが。`dynamic import`とか始めると問題になるかもしれない。
 
@@ -100,49 +98,50 @@ const sr = require("sync-request");
 module.exports = toAmpImg;
 
 function toAmpImg() {
-  return transformer;
+    return transformer;
 
-  function makeValue(url, alt, dimensions) {
-    const width = dimensions.width;
-    const height = dimensions.height;
-    const value = `<amp-img layout="responsive" src="${url}" alt="${alt}" height="${height}" width="${width}" />`;
-    return value;
-  }
-
-  function transformToJsxNode(parent, index, value, position) {
-    const newNode = {
-      type: "jsx",
-      value: value,
-      postion: position,
-    };
-
-    parent.children[index] = newNode;
-  }
-
-  function transformer(ast) {
-    visit(ast, "image", visitor);
-    function visitor(node, index, parent) {
-      const url = node.url;
-      const alt = node.alt;
-      const position = node.position;
-      let path = url;
-
-      if (url.startsWith("/")) {
-        path = p.join(process.cwd(), "public", url);
-        const dimensions = sizeOf(path);
-        const value = makeValue(url, alt, dimensions);
-
-        transformToJsxNode(parent, index, value, position);
-      } else if (url.startsWith("http") || url.startsWith("ftp")) {
-        const res = sr("GET", url);
-        const buf = Buffer.from(res.getBody());
-        const dimensions = sizeOf(buf);
-        const value = makeValue(url, alt, dimensions);
-
-        transformToJsxNode(parent, index, value, position);
-      }
+    function makeValue(url, alt, dimensions) {
+        const width = dimensions.width;
+        const height = dimensions.height;
+        const value =
+            `<amp-img layout="responsive" src="${url}" alt="${alt}" height="${height}" width="${width}" />`;
+        return value;
     }
-  }
+
+    function transformToJsxNode(parent, index, value, position) {
+        const newNode = {
+            type: "jsx",
+            value: value,
+            postion: position,
+        };
+
+        parent.children[index] = newNode;
+    }
+
+    function transformer(ast) {
+        visit(ast, "image", visitor);
+        function visitor(node, index, parent) {
+            const url = node.url;
+            const alt = node.alt;
+            const position = node.position;
+            let path = url;
+
+            if (url.startsWith("/")) {
+                path = p.join(process.cwd(), "public", url);
+                const dimensions = sizeOf(path);
+                const value = makeValue(url, alt, dimensions);
+
+                transformToJsxNode(parent, index, value, position);
+            } else if (url.startsWith("http") || url.startsWith("ftp")) {
+                const res = sr("GET", url);
+                const buf = Buffer.from(res.getBody());
+                const dimensions = sizeOf(buf);
+                const value = makeValue(url, alt, dimensions);
+
+                transformToJsxNode(parent, index, value, position);
+            }
+        }
+    }
 }
 ```
 
@@ -165,22 +164,22 @@ const refractor = require("refractor/core.js");
 refractor.register(require("refractor/lang/javascript.js"));
 
 function highlighter() {
-  return (tree) => {
-    visit(tree, "code", (node) => {
-      const [lang] = (node.lang || "").split(":");
-      if (lang) {
-        node.lang = lang;
-        if (!refractor.registered(lang)) {
-          return;
-        }
-        if (node.data == null) {
-          node.data = {};
-        }
-        node.data.hChildren = refractor.highlight(node.value, lang);
-      }
-    });
-  };
-};
+    return (tree) => {
+        visit(tree, "code", (node) => {
+            const [lang] = (node.lang || "").split(":");
+            if (lang) {
+                node.lang = lang;
+                if (!refractor.registered(lang)) {
+                    return;
+                }
+                if (node.data == null) {
+                    node.data = {};
+                }
+                node.data.hChildren = refractor.highlight(node.value, lang);
+            }
+        });
+    };
+}
 ```
 
 - [amdx](https://github.com/mizchi/amdx)

@@ -221,7 +221,6 @@ pub mod publish;
 
 あとは`main.rs`に以下を追記します。
 
-
 ```rust:title=main.rs
 mod database;
 mod models;
@@ -352,7 +351,7 @@ curl http://localhost:8080/posts
 
 publish状態を変更するPUTを実装します。簡単のため`/posts/publish/$post_id`でPublish状態になることにします。
 
-`web::Path<T>`は`to_owned`で`T`になります。 
+`web::Path<T>`は`to_owned`で`T`になります。
 
 ```rust:title=routes/posts/publish.rs
 use crate::models::Post;

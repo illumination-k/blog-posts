@@ -52,7 +52,6 @@ RUN make
 WORKDIR /local_volume
 
 ENV PATH=/workspace/trimal/source:$PATH
- 
 ```
 
 [マニュアル](http://trimal.cgenomics.org/use_of_the_command_line_trimal_v1.2)によると、`trimal -in seqs.afa -out seqs_trim.afa -automated1`を使うのが最尤法に良いらしい。
@@ -84,19 +83,19 @@ RUN mkdir -p /local_volume
 WORKDIR /local_volume
 ```
 
-
 `raxml-ng-mpi --msa seqs_trim.afa --all --model LG+G+I --bs-trees 100 --threads 8`
 
 - --msa alignmentファイル
 - --all ML search + bootstrapping
 - --model マニュアルを見ると色々あるが今回はLGを選択。
-	- +G (discrete GAMMA with 4 categories, mean category rates, ML estimate of alpha)
-	- +I (ML estimate)
+  - +G (discrete GAMMA with 4 categories, mean category rates, ML estimate of alpha)
+  - +I (ML estimate)
 - --bs-tree Bootstapping num
 
 Bootstrap付きのBestTreeはsupport拡張子のファイル（今回なら`seqs_trim.afa.support`）に保存されています。
 
 ## Reference
+
 Edgar, R.C. (2004) MUSCLE: multiple sequence alignment with high accuracy and high throughput Nucleic Acids Res. 32(5):1792-1797
 
 trimAl: a tool for automated alignment trimming in large-scale phylogenetic analyses Salvador Capella-Gutiérrez, José M. Silla-Martínez and Toni Gabaldón∗ Bioinformatics. 2009 Aug 1;25(15):1972-3.

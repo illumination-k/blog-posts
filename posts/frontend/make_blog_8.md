@@ -39,24 +39,24 @@ updated_at: 2021/09/29
 
 ```json
 {
- "items": [
-   {
-     "title": "AMP YouTube Channel",
-     "url": "https://www.youtube.com/channel/UCXPBsjgKKG2HqsKBhWA4uQw"
-   },
-   {
-     "title": "AMP.dev",
-     "url": "https://amp.dev/"
-   },
-   {
-     "title": "AMP Validator",
-     "url": "https://validator.amp.dev/"
-   },
-   {
-     "title": "AMP Playground",
-     "url": "https://playground.amp.dev/"
-   }
- ]
+  "items": [
+    {
+      "title": "AMP YouTube Channel",
+      "url": "https://www.youtube.com/channel/UCXPBsjgKKG2HqsKBhWA4uQw"
+    },
+    {
+      "title": "AMP.dev",
+      "url": "https://amp.dev/"
+    },
+    {
+      "title": "AMP Validator",
+      "url": "https://validator.amp.dev/"
+    },
+    {
+      "title": "AMP Playground",
+      "url": "https://playground.amp.dev/"
+    }
+  ]
 }
 ```
 
@@ -108,7 +108,7 @@ JSX内ではこれらのテンプレートは
 ```jsx
 <template type="amp-mustache">
     Hello {"{{world}}"}!
-</template>
+</template>;
 ```
 
 のように利用できます。
@@ -119,10 +119,10 @@ JSX内ではこれらのテンプレートは
 
 ```json
 [
-    {
-        "title": "test post",
-        "url": "/posts/test"
-    }
+  {
+    "title": "test post",
+    "url": "/posts/test"
+  }
 ]
 ```
 
@@ -138,12 +138,12 @@ JSX内ではこれらのテンプレートは
     src={`/api/otherarticles`}
     items="."
 >
-{/* @ts-ignore */}
-<template type="amp-mustache">
-    title={"{{title}}"}
-    url={"{{url}}"}
-</template>
-</amp-list>
+    {/* @ts-ignore */}
+    <template type="amp-mustache">
+        title={"{{title}}"}
+        url={"{{url}}"}
+    </template>
+</amp-list>;
 ```
 
 のようにすればよいです。

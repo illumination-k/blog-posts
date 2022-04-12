@@ -9,6 +9,7 @@ updated_at: 2021/09/29
 ---
 
 ## TL;DR
+
 自然言語処理技術では深層学習技術が非常に良い成果をあげています。タンパク質配列からGO Termなどのアノテーション行い、機能を推定する方法として、これまでの多くはBLASTなどの相同性検索を用いていました。最近では、いくつかのツールが深層学習ベースで機能予測を行っています。今回はdeepgoplusを試してみることにします。CNNベースっぽいです。
 
 > Maxat Kulmanov, Robert Hoehndorf, DeepGOPlus: improved protein function prediction from sequence, Bioinformatics, Volume 36, Issue 2, 15 January 2020, Pages 422–429, https://doi.org/10.1093/bioinformatics/btz595

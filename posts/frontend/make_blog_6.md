@@ -36,11 +36,11 @@ updated_at: 2021/09/29
 
 基本的には、`amp-sidebar`で`id`を指定し、buttonの`on`に`tap:{id}.toggle`をつければ、そのボタンで開閉ができるようになる。この`toggle`の部分は他にも可能で
 
-|action|desc|
-|---|---|
-|open (default)|サイドバーを開く|
-|close|サイドバーを閉じる|
-|toggle|サイドバーを開閉する|
+| action         | desc       |
+| -------------- | ---------- |
+| open (default) | サイドバーを開く   |
+| close          | サイドバーを閉じる  |
+| toggle         | サイドバーを開閉する |
 
 の3つが使える。基本的にtoggleでいい気がする。
 

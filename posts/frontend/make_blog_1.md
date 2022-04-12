@@ -28,7 +28,6 @@ Wordpressのトップ画面はこんな感じなので、これよりはよく�
 
 ![lighthouse-next-blog](/images/lighthouse-nextblog-top.PNG)
 
-
 ## 要件
 
 ということで、要件としては、以下のものがほしいです。とはいえ全部できてから公開だと永遠に終わりそうにないので、順次作成していきます。

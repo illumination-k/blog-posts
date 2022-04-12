@@ -16,10 +16,9 @@ Flatbuffersの読み方などは公式を見るのが早そうです。
 
 ファイルの中身は以下の通りです。
 
-| File Name                    | Description                    |
-| ---------------------------- | ------------------------------ |
-| [File.fbs]()                 | Footerの定義                   |
-| [Message.fbs]()              | RecordBatchなどの定義          |
-| [Schema.fbs]()               | logical typeの定義             |
+| File Name                    | Description        |
+| ---------------------------- | ------------------ |
+| [File.fbs]()                 | Footerの定義          |
+| [Message.fbs]()              | RecordBatchなどの定義   |
+| [Schema.fbs]()               | logical typeの定義    |
 | Tensor.fbs, SparseTensor.fbs | Tensorも定義されているらしい？ |
-

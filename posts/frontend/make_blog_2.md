@@ -30,7 +30,6 @@ mdxの特徴として、
 
 なので、このブログでは`md`拡張子を使って記事を書き、レンダリングする際に`mdx`へと変換しています。また、`export`の代わりにfrontmatterを使うことでメタデータを表現しています。
 
-
 ### mdxのデメリット
 
 個人的にブログ書くときにmdxを使う際に不安だったのが、
@@ -166,7 +165,6 @@ layout:
 そこで考えたのが、remarkのcustom loaderを作る方法です。
 `remark-mdx`を使うと、だいたい下のmdxファイルは以下のようにパースされます。
 
-
 ただのfrontmatter付きのマークダウンファイルは以下のような感じでMDASTに変換されます。
 
 ```md
@@ -219,7 +217,6 @@ export default ({meta, children}) => <Layout meta={meta} children={children} />
 ## aa
 
 ### aaa
-
 ```
 
 こうすれば、markdownファイルを置くだけでカスタムコンポーネント付きのmdxに解釈されてレンダリングされるようになります。
@@ -227,7 +224,7 @@ export default ({meta, children}) => <Layout meta={meta} children={children} />
 さらにheaderの情報を含んだmetadataをコンポーネントが受け取れるので、sidebarやtocをJSX側で作ることができます。リファクタリングがしたくなれば、ほとんどカスタムローダー側を触れば解決しそうなところもいけてる気がします。あとこの方法のメリットは突如として
 
 ```jsx
-<button>Push!!!!!!!</button>
+<button>Push!!!!!!!</button>;
 ```
 
 とか入れたくなったときに入れられることです。パースは`mdx`に準拠してやってるので、突然mdxフォーマットで書いても自動で対応されます。

@@ -16,7 +16,7 @@ updated_at: 2021/09/29
 
 ### 長い文章を出力する
 
-```bash 
+```bash
 cat EOF<<
 long sentense!
 EOF
@@ -214,7 +214,6 @@ cat sample.csv | tr , \\t > sample.tsv
 `[ -v variable ]`で確認できる。
 
 ```bash
-
 foo="foo"
 
 if [[ -v foo ]]; then
@@ -234,7 +233,7 @@ fi
 man bash | grep "Alias"
 ```
 
->  Aliases are not expanded when the shell is not interactive, unless the expand_aliases shell option is set using shopt (see the description of shopt under SHELL BUILTIN COMMANDS below).
+> Aliases are not expanded when the shell is not interactive, unless the expand_aliases shell option is set using shopt (see the description of shopt under SHELL BUILTIN COMMANDS below).
 
 ```bash
 shopt -s expand_aliases

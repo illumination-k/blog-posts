@@ -48,7 +48,6 @@ pub struct Record {
 
 [docs](https://docs.rs/bio/latest/bio/io/fastq/index.html)のほぼコピペを貼ります。
 
-
 ```rust
 use std::io;
 use bio::io::fastq;
@@ -132,7 +131,6 @@ flate2 = "0.2"
 
 gzが拡張子についていれば、gzdecoderで読み込んで、そうでなければ普通にBufreadで読み込む関数を作成しておきます。decoderにはflate2のMultiGzDecoderを使用します。
 
-
 ```rust
 use anyhow::Result;
 use std::path::Path;
@@ -192,4 +190,5 @@ fn main() -> Result<()> {
 ```
 
 ## まとめ
+
 docsを読めばいいと思います。

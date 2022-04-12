@@ -54,7 +54,6 @@ componentで読み込んで、そのままsytled-jsxに突っ込むことで、�
 <details>
 <summary>2021/07/01改稿 Next.js v11</summary>
 
-
 webpack5を使っていると`asset modules`を使うことで`raw-loader`の機能が実装できる。まずは`next.config.js`に設定を書く。フルAMPなので、cssをimportすることは想定していない。
 
 ```js:title=next.config.js
@@ -132,6 +131,7 @@ MyDocument.getInitialProps = async (ctx) => {
   };
 };
 ```
+
 </details>
 
 <details>
@@ -200,8 +200,8 @@ MyDocument.getInitialProps = async (ctx) => {
   };
 };
 ```
-</details>
 
+</details>
 
 custom loaderで[refactor](https://github.com/wooorm/refractor)を使ってcodeをTokenに落とす作業をしておけばAMPでもコードがハイライトされる。順番の関係か、prismjsはダーク系のテーマにしたのに黒くならなかったので、`github-markdown-css`側で背景を黒にしておいた。
 

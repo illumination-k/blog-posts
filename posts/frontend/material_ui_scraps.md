@@ -18,17 +18,16 @@ import Button from "@material-ui/core/Button";
 
 const Header = () => {
     return (
-        <div styles={{flexGrow: 1}}>
+        <div styles={{ flexGrow: 1 }}>
             <AppBar>
-            <Button>Left Button</Button>
-            <strong>title</strong>
-            <div styles={{flexGrow: 1}} />
-            <Button>Right Button</Button>
+                <Button>Left Button</Button>
+                <strong>title</strong>
+                <div styles={{ flexGrow: 1 }} />
+                <Button>Right Button</Button>
             </AppBar>
         </div>
-        
-    )
-}
+    );
+};
 ```
 
 - [ReactのMaterial-UIで、右揃えの要素を作るには](https://kanchi0914.netlify.app/2020/03/12/react-spacer/)

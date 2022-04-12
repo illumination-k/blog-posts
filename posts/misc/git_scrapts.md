@@ -10,12 +10,12 @@ updated_at: 2021/12/17
 
 ## HEADの種類
 
-| 名前       | 意味                             |
-| ---------- | -------------------------------- |
-| HEAD       | 最新のコミット                   |
-| ORIG_HEAD  | 最新のコミットの1つ手前          |
-| FETCH_HEAD | リモートブランチの最新のコミット |
-| MERGE_HEAD | MERGEした対象の最新のコミット    |
+| 名前         | 意味                |
+| ---------- | ----------------- |
+| HEAD       | 最新のコミット           |
+| ORIG_HEAD  | 最新のコミットの1つ手前      |
+| FETCH_HEAD | リモートブランチの最新のコミット  |
+| MERGE_HEAD | MERGEした対象の最新のコミット |
 
 - [GitのHEAD, ORIG_HEAD, FETCH_HEAD, MERGE_HEADとは？](https://qiita.com/t-mochizuki/items/347cba461fd570bca03c)
 
@@ -26,7 +26,6 @@ git push origin HEAD
 ```
 
 すれば現在のブランチをpushできて嬉しい。
-
 
 ## 特定のコミットに戻す
 

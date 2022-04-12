@@ -26,7 +26,8 @@ updated_at: "2022-04-09T12:31:07+00:00"
 DNA -> RNA -> Protein
 ↓↑
 DNA
-```  
+```
+
 という反応のことを指し、動物等の生体内ではこの反応系が基本的に行われています。しかし、ウィルスなどは
 
 ```
@@ -51,7 +52,6 @@ RNA-seqのときの最初のステップとして行われる反応です。こ�
 
 ![RT-primers](../../public/library_construction/RT_primers.png)
 
-
 ## TSO (template switching oligo)
 
 逆転写酵素には、Terminal nucleotidyl transferase (TdT) 活性を持つものが存在しています。この活性は、DNAの3'末端にテンプレート非依存で特定の配列を付加します。この反応は本来不要な配列が付加されてしまうので望ましい反応ではありません。しかし、この配列を活用する方法が多数存在しています。
@@ -65,15 +65,14 @@ cDNAを合成する際に、3'末端にpolyC配列を付加し、それと相補
 突出末端を平滑化する際や、平滑末端にA tailを付加する際に使われます。実際にはDNA polymerase Ⅰで、鋳型、プライマー存在下でdNTPを基質として鋳型に相補的なDNAを合成します。dATPと一緒に反応させることで、A tailを付加できます。5'-> 3' exonuclease活性を持たず、一本鎖特異的な5' -> 3'exonuclease活性を持ちます。
 
 1. 5' -> 3' DNA polymerase活性
-![klenow](https://catalog.takara-bio.co.jp/IMAGES/2130a.gif)
+   ![klenow](https://catalog.takara-bio.co.jp/IMAGES/2130a.gif)
 
 2. 一本鎖特異的な3' -> 5'exonuclease活性
-![klenow exonuclease](https://catalog.takara-bio.co.jp/IMAGES/2130c.gif)
+   ![klenow exonuclease](https://catalog.takara-bio.co.jp/IMAGES/2130c.gif)
 
 ## Ligation
 
 ligationはDNA同士をつなげる反応で、ライブラリ調製以外にもベクター作成など様々な場所で利用されます。よく使われるのは制限酵素で切断したベクターと、その突出末端を相補的に持つ挿入用のDNAを繋げる方法です。下図にあるように、相補的な突出末端を持つDNA同士を繋げることができます。酵素によっては平滑末端でも繋げられます。平滑末端で処理する場合はリン酸化等を行うのが一般的です([参考](https://lifescience.toyobo.co.jp/upload/upld86/protocol-c/cloning86pc01.pdf))。
-
 
 ![md={6}:ligation](https://media.addgene.org/data/easy-thumbnails/filer_public/cms/filer_public/21/27/212780f6-b140-440b-b414-1ec4353167d6/ligation.gif__900x316_q85_crop_subsampling-2_upscale.png)
 
@@ -87,7 +86,7 @@ Adaptorの切断やUSER cloningなどに使われることがあります。
 
 ![md={6}:adaptor-by-user](https://www.neb.com/-/media/nebus/page-images/newsized-brochure-images/cloning-and-mapping/user_lp_loopadaptorcleavage.png?rev=f6c3b5a51d7f40b093f03133a39934db&hash=861227C19378CCFB0154102618B135CB)
 
-## Second Strand Synthesis (Gubler and Hoffman Procedure) 
+## Second Strand Synthesis (Gubler and Hoffman Procedure)
 
 cDNAは一本鎖DNAなわけですが、基本的には二本鎖DNAのほうが扱いやすいです。なので、二本鎖DNAにするための方法があります。近年の方法はRNaseH + DNA polymerase Iを使うことが多いです。RNaseHはRNAにnickを入れる反応を起こします。DNA polymerase Iは二本鎖特異的5’→3’ exonuclease活性および一本鎖特異的3’→5’ exonuclease活性を有するDNA合成酵素です。
 

@@ -122,17 +122,17 @@ makePostsCache();
 package.jsonのbuildとかの部分を以下のように変更する。
 
 ```json:title=package.json
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "cache-posts": "node script/makeCache.js" 
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn cache-posts && git add cache/data.js"
-    }
-  },
+"scripts": {
+  "dev": "next",
+  "build": "next build",
+  "start": "next start",
+  "cache-posts": "node script/makeCache.js" 
+},
+"husky": {
+  "hooks": {
+    "pre-commit": "yarn cache-posts && git add cache/data.js"
+  }
+},
 ```
 
 こうすると、commitするたびに自動で`makeCache.js`が走るので楽。
@@ -150,64 +150,62 @@ git commit -m "no-hooks!" --no-verify
 ということでsearch pageを作っていく。`getServerSideProps`はctx変数をうけとる。ctxには大体の情報が入っている。今回はquery結果だけほしいので`ctx.query`だけ使う。
 
 ```jsx
-import Link from "next/link"
 import Layout from "@components/Layout";
-
+import Link from "next/link";
 
 const SearchResult = (props) => {
-  const { query, meta } = props;
-  const listitems = meta.map((res, idx) => {
-    const url = `/posts/${res.id}`;
+    const { query, meta } = props;
+    const listitems = meta.map((res, idx) => {
+        const url = `/posts/${res.id}`;
+        return (
+            <li key={idx}>
+                <Link href={url}>{res.title}</Link>
+            </li>
+        );
+    });
     return (
-      <li key={idx}>
-        <Link href={url}>{res.title}</Link>
-      </li>
+        <Layout>
+            <h1>Search Results</h1>
+            <h2>Query: {query}</h2>
+            <ul>
+                {listitems}
+            </ul>
+        </Layout>
     );
-  });
-  return (
-    <Layout>
-      <h1>Search Results</h1>
-      <h2>Query: {query}</h2>
-      <ul>
-        {listitems}
-      </ul>
-    </Layout>
-  );
 };
 
 export async function getServerSideProps(ctx) {
-  const { posts } = await require("../../cache/data");
-  const FlexSearch = require("flexsearch");
-  const query = ctx.query.q;
+    const { posts } = await require("../../cache/data");
+    const FlexSearch = require("flexsearch");
+    const query = ctx.query.q;
 
-  let index = new FlexSearch({
-    tokenize: function (str) {
-      return str.split(" ");
-    },
-    doc: {
-      id: "id",
-      field: ["data:words"],
-    },
-  });
+    let index = new FlexSearch({
+        tokenize: function(str) {
+            return str.split(" ");
+        },
+        doc: {
+            id: "id",
+            field: ["data:words"],
+        },
+    });
 
-  await index.add(posts);
+    await index.add(posts);
 
-  const res = await index.search(query);
-  const meta = res.map((r) => ({
-    id: r.id,
-    title: r.data.title,
-  }));
+    const res = await index.search(query);
+    const meta = res.map((r) => ({
+        id: r.id,
+        title: r.data.title,
+    }));
 
-  return {
-    props: { query: query, meta: meta },
-  };
+    return {
+        props: { query: query, meta: meta },
+    };
 }
 
 export default SearchResult;
 ```
 
 wordsはmakeCache.js時点でスペース区切りで保存してあるので、flexsearchのtokenizeはカスタムしたもの（空白区切りでarrayにするだけ）を使う。それ以外はflexsearchのドキュメントに書いてあるとおりだと思う。idがurl用のパスになっているので、そのまま渡している。
-
 
 ということで、とりあえずこんな形でサイト内の記事検索を実装してみた。Googleはすごい。
 
