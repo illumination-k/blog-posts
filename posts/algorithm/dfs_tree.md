@@ -5,7 +5,7 @@ description: rustで木上のDFSとDFS木
 lang: ja
 category: algorithm
 created_at: 2021/08/27
-updated_at: "2022-04-12T15:33:22+00:00"
+updated_at: "2022-04-12T16:34:32+00:00"
 ---
 
 ## TL;DR
@@ -23,10 +23,12 @@ updated_at: "2022-04-12T15:33:22+00:00"
 まあ木に限る必要は特にないんですが、木上でDFSするところから始めます。graphは隣接リスト形式で持つものとします。
 
 ```rust
-use proconio::{input, fastout};
+use proconio::{fastout, input};
 
 fn dfs(start: usize, graph: &Vec<Vec<usize>>, seen: &mut Vec<bool>) {
-    if seen[start] { return; }
+    if seen[start] {
+        return;
+    }
     seen[start] = true;
 
     println!("{}", start);
@@ -38,7 +40,7 @@ fn dfs(start: usize, graph: &Vec<Vec<usize>>, seen: &mut Vec<bool>) {
 
 #[fastout]
 fn main() {
-    input!{
+    input! {
         n: usize,
         ab: [(usize, usize); n-1]
     }
@@ -46,8 +48,8 @@ fn main() {
     let mut graph = vec![vec![]; n];
 
     for &(a, b) in ab.iter() {
-        graph[a-1].push(b-1);
-        graph[b-1].push(a-1);
+        graph[a - 1].push(b - 1);
+        graph[b - 1].push(a - 1);
     }
     let mut seen = vec![false; n];
     dfs(0, &graph, &mut seen);
@@ -89,7 +91,7 @@ struct DfsTree {
     graph: Vec<Vec<usize>>,
     tree_index_to_dfs_index: Vec<usize>,
     dfs_index_to_tree_index: Vec<usize>,
-    cnt: usize
+    cnt: usize,
 }
 
 impl DfsTree {
@@ -109,14 +111,16 @@ impl DfsTree {
     }
 
     fn dfs(&mut self, v: usize, graph: &Vec<Vec<usize>>, seen: &mut Vec<bool>) {
-        if seen[v] { return; }
+        if seen[v] {
+            return;
+        }
 
         seen[v] = true;
         let dfs_ord = self.cnt;
         self.tree_index_to_dfs_index[v] = dfs_ord;
         self.dfs_index_to_tree_index[dfs_ord] = v;
         self.cnt += 1;
-        
+
         for i in 0..graph[v].len() {
             self.dfs(graph[v][i], graph, seen);
         }
@@ -125,7 +129,7 @@ impl DfsTree {
 
 #[fastout]
 fn main() {
-    input!{
+    input! {
         n: usize,
         ab: [(usize, usize); n-1]
     }
@@ -133,8 +137,8 @@ fn main() {
     let mut graph = vec![vec![]; n];
 
     for &(a, b) in ab.iter() {
-        graph[a-1].push(b-1);
-        graph[b-1].push(a-1);
+        graph[a - 1].push(b - 1);
+        graph[b - 1].push(a - 1);
     }
     let mut seen = vec![false; n];
     let mut dfs_tree = DfsTree::new(graph);
@@ -155,7 +159,7 @@ inputは同じなので、outputだけ載せます。`tree_index_to_dfs_index[i]
 部分木を取得するためには、あるノードv (vはDFS木のインデックスです) について、その子孫のDFSが終了したタイミングを`pos[v]`として保存する必要があります。vを根とする部分木は`[v, pos[v])`の半開区間で表すことができます。あるノードvの探索が終わるタイミングは、再帰関数の中の`for`文を抜けたところです。
 
 ```rust
-use proconio::{input, fastout};
+use proconio::{fastout, input};
 
 #[derive(Debug, Clone)]
 struct DfsTree {
@@ -163,7 +167,7 @@ struct DfsTree {
     tree_index_to_dfs_index: Vec<usize>,
     dfs_index_to_tree_index: Vec<usize>,
     pos: Vec<usize>,
-    cnt: usize
+    cnt: usize,
 }
 
 impl DfsTree {
@@ -184,14 +188,16 @@ impl DfsTree {
     }
 
     fn dfs(&mut self, v: usize, graph: &Vec<Vec<usize>>, seen: &mut Vec<bool>) {
-        if seen[v] { return; }
+        if seen[v] {
+            return;
+        }
 
         seen[v] = true;
         let dfs_ord = self.cnt;
         self.tree_index_to_dfs_index[v] = dfs_ord;
         self.dfs_index_to_tree_index[dfs_ord] = v;
         self.cnt += 1;
-        
+
         for i in 0..graph[v].len() {
             self.dfs(graph[v][i], graph, seen);
         }
@@ -218,7 +224,7 @@ impl DfsTree {
 }
 #[fastout]
 fn main() {
-    input!{
+    input! {
         n: usize,
         ab: [(usize, usize); n-1]
     }
@@ -226,8 +232,8 @@ fn main() {
     let mut graph = vec![vec![]; n];
 
     for &(a, b) in ab.iter() {
-        graph[a-1].push(b-1);
-        graph[b-1].push(a-1);
+        graph[a - 1].push(b - 1);
+        graph[b - 1].push(a - 1);
     }
     let mut seen = vec![false; n];
     let mut dfs_tree = DfsTree::new(graph);

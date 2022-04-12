@@ -6,7 +6,7 @@
   "license": "MIT",
   "husky": {
     "hooks": {
-      "pre-push": "dprint fmt && yarn prep && git add . --all && git commit -m 'auto precommit'"
+      "pre-push": "dprint fmt && yarn prep && yarn autocommit"
     }
   },
   "devDependencies": {
@@ -14,6 +14,8 @@
   },
   "scripts": {
     "prep": "./smark prep --index-dir index --input posts",
-    "dev": "./smark run --index-dir index --static-dir ./images --port ${PORT:-8080}"
+    "dev": "./smark run --index-dir index --static-dir ./images --port ${PORT:-8080}",
+    "fmt": "dprint fmt",
+    "autocommit": "git add . --all && git commit -m 'autocommit'"
   }
 }

@@ -65,8 +65,12 @@ fn main() {
     let s = [0, 1, 1, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55];
 
     match s.binary_search(&1) {
-        Ok(i) => { dbg!(i); },
-        Err(i) => { dbg!(i); }
+        Ok(i) => {
+            dbg!(i);
+        }
+        Err(i) => {
+            dbg!(i);
+        }
     };
 }
 ```
@@ -76,8 +80,8 @@ fn main() {
 ```rust
 fn upper_bound(x: &usize, s: Vec<usize>) -> usize {
     match s.binary_search(x) {
-        Ok(i) => i+1,
-        Err(i) => i
+        Ok(i) => i + 1,
+        Err(i) => i,
     }
 }
 ```

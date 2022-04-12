@@ -5,7 +5,7 @@ description: 包除原理とその実装、オイラー関数に関するメモ
 lang: ja
 category: algorithm
 created_at: 2021/08/27
-updated_at: "2022-04-12T15:33:25+00:00"
+updated_at: "2022-04-12T16:34:32+00:00"
 ---
 
 ## TL;DR
@@ -74,7 +74,7 @@ fn main() {
     let nums = vec![2, 3, 5];
     let mut counter = 0;
 
-    for bit in 0..1<<nums.len() {
+    for bit in 0..1 << nums.len() {
         // 2進数のときの1の数をカウント
         let popcount = bit.count_ones();
         let mut mul = 1;
@@ -85,12 +85,14 @@ fn main() {
             }
         }
 
-        if mul == 1 { continue; }
+        if mul == 1 {
+            continue;
+        }
 
         if popcount % 2 == 1 {
             counter += 100 / mul;
         } else {
-            counter -= 100 / mul; 
+            counter -= 100 / mul;
         }
     }
 

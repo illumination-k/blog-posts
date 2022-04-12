@@ -5,7 +5,7 @@ description: 二次元平面上でダイクトストラやりたいってとき�
 lang: ja
 category: algorithm
 created_at: 2021/08/27
-updated_at: "2022-04-12T15:33:23+00:00"
+updated_at: "2022-04-12T16:34:32+00:00"
 ---
 
 ## TL;DR
@@ -27,14 +27,14 @@ updated_at: "2022-04-12T15:33:23+00:00"
 #![allow(unused_imports)]
 #![allow(dead_code)]
 
-use proconio::{input, fastout};
-use proconio::marker::*;
-use whiteread::parse_line;
-use std::collections::*;
 use num::*;
 use num_traits::*;
-use superslice::*;
+use proconio::marker::*;
+use proconio::{fastout, input};
+use std::collections::*;
 use std::ops::*;
+use superslice::*;
+use whiteread::parse_line;
 
 use itertools::Itertools;
 use itertools_num::ItertoolsNum;
@@ -49,7 +49,7 @@ use itertools_num::ItertoolsNum;
 ```rust
 #[fastout]
 fn main() {
-    input!{
+    input! {
         h: usize, w: usize,
         graph: [Chars; h],
     }
@@ -80,13 +80,17 @@ fn main() {
             let cx = x as isize + dx;
             let cy = y as isize + dy;
 
-            if cx < 0 || cy < 0 || cx >= w as isize || cy >= h as isize { continue; }
+            if cx < 0 || cy < 0 || cx >= w as isize || cy >= h as isize {
+                continue;
+            }
             let cxu = cx as usize;
             let cyu = cy as usize;
-            if dist[cyu][cxu] >= 0 { continue; }
+            if dist[cyu][cxu] >= 0 {
+                continue;
+            }
             if graph[cyu][cxu] == '#' {
-                dist[cyu][cxu] = dep+1;
-                pq.push((-(dep+1), (cxu, cyu)))
+                dist[cyu][cxu] = dep + 1;
+                pq.push((-(dep + 1), (cxu, cyu)))
             } else {
                 dist[cyu][cxu] = dep;
                 pq.push((-dep, (cxu, cyu)))
@@ -111,15 +115,19 @@ DPのほうが楽らしい。探索するときに、白から黒、もしくは
 ```rust
 #[fastout]
 fn main() {
-    input!{
+    input! {
         h: usize, w: usize,
         s: [Chars; h]
     }
     let vect = vec![(0, 1), (1, 0)];
     let mut pq = BinaryHeap::new();
-    if s[0][0] == '.' { pq.push((0, (0, 0)))} else {pq.push((-1, (0, 0)))};
+    if s[0][0] == '.' {
+        pq.push((0, (0, 0)))
+    } else {
+        pq.push((-1, (0, 0)))
+    };
     let mut d = vec![vec![-1; w]; h];
- 
+
     while let Some((dep, (x, y))) = pq.pop() {
         let dep = -dep;
 
@@ -133,15 +141,15 @@ fn main() {
                         d[cyu][cxu] = dep;
                         pq.push((-dep, (cxu, cyu)))
                     } else {
-                        d[cyu][cxu] = dep+1;
-                        pq.push((-(dep+1), (cxu, cyu)))
+                        d[cyu][cxu] = dep + 1;
+                        pq.push((-(dep + 1), (cxu, cyu)))
                     }
                 }
             }
         }
     }
- 
-    println!("{}", (d[h-1][w-1]+1)/2)
+
+    println!("{}", (d[h - 1][w - 1] + 1) / 2)
 }
 ```
 
@@ -154,7 +162,7 @@ fn main() {
 ```rust
 #[fastout]
 fn main() {
-    input!{
+    input! {
         h: usize, w: usize,
         sy: usize, sx: usize,
         gy: usize, gx: usize,
@@ -164,26 +172,34 @@ fn main() {
     let mut dist = vec![vec![-1; w]; h];
     let directions = vec![(0, 1), (1, 0), (-1, 0), (0, -1)];
     let mut pq = BinaryHeap::new();
-    pq.push((0, (sx-1, sy-1)));
+    pq.push((0, (sx - 1, sy - 1)));
 
     while let Some((dep, (x, y))) = pq.pop() {
         let dep = -dep;
-        if dist[y][x] >= 0 { continue; }
+        if dist[y][x] >= 0 {
+            continue;
+        }
 
         dist[y][x] = dep;
 
         // 通常の移動
         for &(dx, dy) in directions.iter() {
             let (cx, cy) = (x as isize + dx, y as isize + dy);
-            if cx < 0 || cy < 0 || cx >= w as isize || cy >= h as isize { continue; }
+            if cx < 0 || cy < 0 || cx >= w as isize || cy >= h as isize {
+                continue;
+            }
 
             let (cxu, cyu) = (cx as usize, cy as usize);
-            if dist[cyu][cxu] >= 0 { continue; }
-            if graph[cyu][cxu] == '#' { continue; }
+            if dist[cyu][cxu] >= 0 {
+                continue;
+            }
+            if graph[cyu][cxu] == '#' {
+                continue;
+            }
 
-            pq.push((-dep , (cxu, cyu)));
+            pq.push((-dep, (cxu, cyu)));
         }
-        
+
         // ワープ
         let left_bound = if x < 2 { 0 } else { x - 2 };
         let right_bound = if x + 3 >= w { w } else { x + 3 };
@@ -192,14 +208,18 @@ fn main() {
 
         for wx in left_bound..right_bound {
             for wy in up_bound..down_bound {
-                if dist[wy][wx] >= 0 { continue; }
-                if graph[wy][wx] == '#' { continue; }
-                pq.push((-(dep+1), (wx, wy)))
+                if dist[wy][wx] >= 0 {
+                    continue;
+                }
+                if graph[wy][wx] == '#' {
+                    continue;
+                }
+                pq.push((-(dep + 1), (wx, wy)))
             }
         }
     }
-    
-    println!("{}", dist[gy-1][gx-1]);
+
+    println!("{}", dist[gy - 1][gx - 1]);
 }
 ```
 
@@ -214,7 +234,7 @@ fn main() {
 ```rust
 #[fastout]
 fn main() {
-    input!{
+    input! {
         h: usize, w: usize,
         graph: [[isize; w]; h]
     }
@@ -222,7 +242,7 @@ fn main() {
     let directions = vec![(0, 1), (1, 0), (-1, 0), (0, -1)];
     let mut pq = BinaryHeap::new();
 
-    let starts = vec![(0, h-1), (w-1, 0), (w-1, h-1)];
+    let starts = vec![(0, h - 1), (w - 1, 0), (w - 1, h - 1)];
     let mut dist = vec![vec![vec![-1; w]; h]; 3];
 
     for (i, r) in starts.iter().enumerate() {
@@ -234,12 +254,16 @@ fn main() {
 
             for &(dx, dy) in directions.iter() {
                 let (cx, cy) = (x as isize + dx, y as isize + dy);
-                if cx < 0 || cy < 0 || cx >= w as isize || cy >= h as isize { continue; }
+                if cx < 0 || cy < 0 || cx >= w as isize || cy >= h as isize {
+                    continue;
+                }
                 let (cxu, cyu) = (cx as usize, cy as usize);
 
-                if dist[i][cyu][cxu] >= 0 { continue; }
-                dist[i][cyu][cxu] = dep+graph[cyu][cxu];
-                pq.push((-(dep+graph[cyu][cxu]), (cxu, cyu)))
+                if dist[i][cyu][cxu] >= 0 {
+                    continue;
+                }
+                dist[i][cyu][cxu] = dep + graph[cyu][cxu];
+                pq.push((-(dep + graph[cyu][cxu]), (cxu, cyu)))
             }
         }
     }
@@ -248,8 +272,8 @@ fn main() {
 
     for x in 0..w {
         for y in 0..h {
-            let sum = (0..3).fold(0,|acc, idx| acc + dist[idx][y][x]) - graph[y][x] * 2;
-            ans = std::cmp::min(ans ,sum);
+            let sum = (0..3).fold(0, |acc, idx| acc + dist[idx][y][x]) - graph[y][x] * 2;
+            ans = std::cmp::min(ans, sum);
         }
     }
 

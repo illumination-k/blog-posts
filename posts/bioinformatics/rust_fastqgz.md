@@ -49,8 +49,8 @@ pub struct Record {
 [docs](https://docs.rs/bio/latest/bio/io/fastq/index.html)のほぼコピペを貼ります。
 
 ```rust
-use std::io;
 use bio::io::fastq;
+use std::io;
 
 fn main() {
     let mut reader = fastq::Reader::new(io::stdin());
@@ -83,9 +83,8 @@ let mut reader = fastq::Reader::from_file(path).unwrap();
 [docs](https://docs.rs/bio/latest/bio/io/fastq/index.html)のほぼコピペを再び貼ります。
 
 ```rust
-use std::io;
 use bio::io::fastq;
-
+use std::io;
 
 fn main() {
     let mut seed = 42;
@@ -95,14 +94,16 @@ fn main() {
     let mut writer = fastq::Writer::new(io::stdout());
 
     for _ in 0..10 {
-        let seq = (0..100).map(|_| {
-            seed = ((seed ^ seed << 13) ^ seed >> 7) ^ seed << 17; // don't use this random generator
-            nucleotides[seed % 4]
-        }).collect::<Vec<u8>>();
+        let seq = (0..100)
+            .map(|_| {
+                seed = ((seed ^ seed << 13) ^ seed >> 7) ^ seed << 17; // don't use this random generator
+                nucleotides[seed % 4]
+            })
+            .collect::<Vec<u8>>();
 
         let qual = (0..100).map(|_| b'!').collect::<Vec<u8>>();
 
-    writer.write("random", None, seq.as_slice(), qual.as_slice());
+        writer.write("random", None, seq.as_slice(), qual.as_slice());
     }
 }
 ```
@@ -133,9 +134,9 @@ gzが拡張子についていれば、gzdecoderで読み込んで、そうでな
 
 ```rust
 use anyhow::Result;
-use std::path::Path;
-use std::io::{ BufRead, BufReader };
 use flate2::read::MultiGzDecoder;
+use std::io::{BufRead, BufReader};
+use std::path::Path;
 
 pub fn open_with_gz<P: AsRef<Path>>(p: P) -> Result<Box<dyn BufRead>> {
     let r = std::fs::File::open(p.as_ref())?;
@@ -169,8 +170,8 @@ WriterもReaderと同じような感じでBufWriteを生成して、`fastq::io::
 use anyhow::Result;
 use std::path::Path;
 
-use flate2::Compression;
 use flate2::write::GzEncoder;
+use flate2::Compression;
 
 use bio::io::fastq;
 

@@ -52,7 +52,7 @@ fn test_op() {
 ```rust
 struct Point<T> {
     x: T,
-    y: T
+    y: T,
 }
 ```
 

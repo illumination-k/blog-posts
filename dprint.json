@@ -4,8 +4,16 @@
   "json": {},
   "markdown": {},
   "toml": {},
-  "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml}"],
+  "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,rs,py}"],
   "excludes": ["**/node_modules", "**/*-lock.json"],
+  "exec": {
+    "associations": "**/*.{rs,py}",
+    "rustfmt": "rustfmt",
+    "rustfmt.associations": "**/*.rs",
+
+    "black": "black",
+    "black.associations": "**/*.py"
+  },
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.64.2.wasm",
     "https://plugins.dprint.dev/json-0.14.1.wasm",

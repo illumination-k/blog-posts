@@ -5,7 +5,7 @@ description: rustにも実はpandas likeなcrateがあることを知ったの�
 lang: ja
 category: rust
 created_at: 2021/01/09
-updated_at: "2022-04-12T15:34:18+00:00"
+updated_at: "2022-04-12T16:34:33+00:00"
 ---
 
 ## TL;DR
@@ -54,8 +54,8 @@ pandasはお好みのパッケージ管理ツールでインストールして�
 rust側は下記の`todo!()`部分に相当する場所を書いているつもりです。
 
 ```rust
-use polars::prelude::*;
 use anyhow::Result;
+use polars::prelude::*;
 
 fn main() -> Result<()> {
     todo!();
