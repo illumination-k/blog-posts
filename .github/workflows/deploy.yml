@@ -20,3 +20,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "blog-post-smark"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
+      - name: Deploy vercel
+        run: curl -X POST ${{secrets.DEV_URL}}
