@@ -1,7 +1,7 @@
 {
   "incremental": true,
-  "typescript": {},
-  "json": {},
+  "typescript": { "indentWidth": 2 },
+  "json": { "indentWidth": 2 },
   "markdown": {},
   "toml": {},
   "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,rs,py}"],

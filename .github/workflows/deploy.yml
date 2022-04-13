@@ -1,12 +1,12 @@
-name: Deploy to heroku
+name: Deploy to heroku and vercel
 
 on:
   push:
     branches:
       - master
     paths:
-      - "./posts/**"
-      - "./index/**"
+      - "posts/**"
+      - "index/**"
 
 jobs:
   deploy:
