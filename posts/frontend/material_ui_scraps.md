@@ -5,7 +5,7 @@ description: material-uiに関するスクラップ
 lang: ja
 category: frontend
 created_at: 2021/09/22
-updated_at: 2022/04/12
+updated_at: 2022/04/13
 ---
 
 ## 右揃えの要素を作る

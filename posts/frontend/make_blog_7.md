@@ -5,7 +5,7 @@ description: Next.jsで作ったAMPオンリーのブログをPWAにも対応さ
 lang: ja
 category: frontend
 created_at: 2020/09/30
-updated_at: 2022/04/12
+updated_at: 2022/04/13
 ---
 
 ## TL;DR

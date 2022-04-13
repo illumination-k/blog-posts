@@ -5,7 +5,7 @@ description: Python、特にmatplotlibで作成したPNGファイルをJSONにSe
 lang: ja
 category: frontend
 created_at: 2020/09/25
-updated_at: 2022/04/12
+updated_at: 2022/04/13
 ---
 
 ## TL;DR
