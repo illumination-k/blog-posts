@@ -1,6 +1,6 @@
-# Blog Post
+# Blog Posts
 
-This is the repository to manage blog posts hosted on [My Blog](https://illumination-k.dev).
+This is the repository to manage blog posts hosted on **[my blog](https://illumination-k.dev)**.
 
 If you find any issue in my blog, feel free to create an issue.
 
