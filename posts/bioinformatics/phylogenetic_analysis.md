@@ -1,11 +1,12 @@
 ---
 uuid: 1f8bac44-be7d-421e-9987-1b91b438eb04
-title: "Phylogenetic Analysisに関するまとめ"
+title: Phylogenetic Analysisに関するまとめ
 description: "Phylogenetic Analysis各種ステップのAlignment, Trim, Model選択, Tree Constructionに関する情報、ツールに関してまとめ"
 lang: ja
-category: "bioinformatics"
+category: bioinformatics
+created_at: "2022-05-12T08:26:46+00:00"
+updated_at: "2022-05-12T08:27:28+00:00"
 ---
-
 
 ## TL;DR
 
@@ -19,14 +20,14 @@ Phylogenetic Analysis各種ステップのAlignment, Trim, Model選択, Tree Con
 
 大体まとめると以下のような結論になっている。詳細なスコアを知りたい場合は、論文を参照。
 
-|Tool Name|Method|Seq type|Accuracy|Time|
-|---|---|---|---|---|
-|CLUSTAL-OMEGA|global/ Progressive|Protein, DNA, RNA|Less accuracy|Less time|
-|MAFFT|global/ Iterative|Protein, DNA, RNA|High alignment quality|Higher than KALIGN|
-|KALIGN|Progressive|Protein, DNA, RNA|Less accuracy as compared with PROBCONS and MAFFT|Lowest|
-|MUSCLE|Progressive Step1 and Step2 iterative Step 3|Protein|More accurate than CLUSTAL-OMEGA|Less time with a minimum number of iteration|
-|RETALING|Progressive Cornercutting Multiple Sequence Alignment|Protein|More accurate than CLUSTAL-OMEGA|Higher than KALIGN|
-|PROBCONS|Probabilistic Consistency-based Multiple Alignment of Amino Acid Sequences|Protein|The highest alignment accuracy|Highest|
+| Tool Name     | Method                                                                     | Seq type          | Accuracy                                          | Time                                         |
+| ------------- | -------------------------------------------------------------------------- | ----------------- | ------------------------------------------------- | -------------------------------------------- |
+| CLUSTAL-OMEGA | global/ Progressive                                                        | Protein, DNA, RNA | Less accuracy                                     | Less time                                    |
+| MAFFT         | global/ Iterative                                                          | Protein, DNA, RNA | High alignment quality                            | Higher than KALIGN                           |
+| KALIGN        | Progressive                                                                | Protein, DNA, RNA | Less accuracy as compared with PROBCONS and MAFFT | Lowest                                       |
+| MUSCLE        | Progressive Step1 and Step2 iterative Step 3                               | Protein           | More accurate than CLUSTAL-OMEGA                  | Less time with a minimum number of iteration |
+| RETALING      | Progressive Cornercutting Multiple Sequence Alignment                      | Protein           | More accurate than CLUSTAL-OMEGA                  | Higher than KALIGN                           |
+| PROBCONS      | Probabilistic Consistency-based Multiple Alignment of Amino Acid Sequences | Protein           | The highest alignment accuracy                    | Highest                                      |
 
 > Modified from Mohamed et al., 2018 Table 1 and Table 5
 
@@ -79,7 +80,7 @@ modeltellerのweb siteはhttpsじゃなくて怖かったため貼ってない�
 
 ### Software一覧
 
-#### 最尤法 
+#### 最尤法
 
 - [raxml-ng](https://github.com/amkozlov/raxml-ng)
 - [iqtree](http://www.iqtree.org)
