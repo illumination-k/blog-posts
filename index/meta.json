@@ -27,12 +27,17 @@
       "deletes": null
     },
     {
+      "segment_id": "4e3bdb8d-6eae-4f50-8502-7301497a7f17",
+      "max_doc": 1,
+      "deletes": null
+    },
+    {
       "segment_id": "640b4d99-8d9e-42c4-97b7-a3209b325fa0",
       "max_doc": 1,
       "deletes": null
     },
     {
-      "segment_id": "a76422d9-21b6-4983-a61d-9d78c131325a",
+      "segment_id": "75a2215e-3780-46ff-a4a5-95c103b2aed6",
       "max_doc": 1,
       "deletes": null
     },
@@ -193,5 +198,5 @@
       }
     }
   ],
-  "opstamp": 909
+  "opstamp": 916
 }
