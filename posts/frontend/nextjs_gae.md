@@ -65,7 +65,7 @@ automatic_scaling:
   max_concurrent_requests: 80
 ```
 
-gcloud経由でとりあえずdeployしてテストしておく。`.gcloudignore`はnode用のが自動で生成される。`coverage`などの不必要なファイルを書き込んで置きたい。
+gcloud経由でとりあえずdeployしてテストしておく。`.gcloudignore`はnode用のファイルが自動で生成される。`coverage`などの不必要なファイルを書き込んで置きたい。
 
 ```bash
 gcloud app deploy app.yaml --project $PROJECT_ID
@@ -114,8 +114,8 @@ cloudbuildでは、変数を書いておくとよしなに置換してくれる�
 
 ### Webhookでのトリガー作成
 
-webhookを選ぶだけ。シークレットキー作成する必要があるので、SecretManagerの権限がいる。
+webhookを選ぶだけ。シークレットキー作成する必要があるので、SecretManagerの権限がいる。`-d`でボディを明示しないとエラーになる。
 
 ```bash
-curl -X POST $preview_url
+curl -X POST -d '{}' $preview_url
 ```

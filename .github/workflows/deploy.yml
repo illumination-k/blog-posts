@@ -1,4 +1,4 @@
-name: Deploy to heroku and vercel
+name: Deploy to heroku and cloud build
 
 on:
   push:
@@ -20,5 +20,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "blog-post-smark"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-      - name: Deploy vercel
-        run: curl -X POST ${{secrets.DEV_URL}}
+      - name: Deploy cloud build
+        run: curl -X POST -d '{}' ${{secrets.DEV_URL}}
