@@ -5,7 +5,7 @@ description: matplotlibを使っていて、colorbarだけ作りたいとき、�
 lang: ja
 category: python
 created_at: 2020/09/26
-updated_at: "2022-04-12T15:34:08+00:00"
+updated_at: "2022-05-19T10:56:52+00:00"
 ---
 
 ## TL;DR
@@ -41,20 +41,18 @@ norm = mpl.colors.Normalize(vmin=vmin, vmax=vmax)
 saveするときが少し注意が必要で、`bbox_inches="tight"`をオプションで指定しないとticksや、label情報が消えます。
 
 ```python
-fig, ax = plt.subplots(figsize=(1, 5))
+fig, cbar = plt.subplots(figsize=(1, 5))
 cmap = plt.get_cmap("Wistia")
-cbar = mpl.colorbar.ColorbarBase(
-    ax=ax,
-    cmap=cmap,
-    norm=norm,
+mpl.colorbar.Colorbar(
+    ax=cbar,
+    mappable=mpl.cm.ScalarMappable(norm=norm, cmap=cmap),
     orientation="vertical",
-    label="sample",
-)
+).set_label("sample", fontsize=20)
 
 plt.savefig("sample_colormap.png", bbox_inches="tight")
 ```
 
-<amp-img src="/public/colorbar_sample.png" height="20rem" width="8rem" alt="sample_colorbar" />
+<amp-img src="../../public/colorbar_sample.png" height="20rem" width="8rem" alt="sample_colorbar" />
 
 対応するrgbaカラーを取得します。
 
