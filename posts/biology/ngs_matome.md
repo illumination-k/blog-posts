@@ -4,6 +4,9 @@ title: NGS解析に関するまとめ
 description: 次世代シーケンサーの解析って言ってもピンとこない人が多いような気がするので、知識の整理も兼ねてその辺から軽く書いていこうと思います。生物わかんない人にわかるように頑張ろうと思います。
 lang: ja
 category: biology
+tags:
+  - biology
+  - ngs
 created_at: 2021/01/03
 updated_at: "2022-04-12T15:33:46+00:00"
 ---

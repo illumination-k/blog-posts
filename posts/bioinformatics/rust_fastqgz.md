@@ -4,6 +4,9 @@ title: Rustでfastq/fastq.gzを読み書きする
 description: rust-bioを使ってfastq/fastq.gzを読み書きします。
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - rust
 created_at: 2020/12/26
 updated_at: 2022/04/12
 ---

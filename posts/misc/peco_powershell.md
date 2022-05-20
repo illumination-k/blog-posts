@@ -4,6 +4,8 @@ title: Windows(Powershell)でpecoを使ってみる (履歴のインクリメン
 description: Powershellでpecoを使って履歴をインクリメンタルサーチしてみます。
 lang: ja
 category: misc
+tags:
+  - powershell
 created_at: 2021/06/26
 updated_at: 2022/04/12
 ---

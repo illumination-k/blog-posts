@@ -4,6 +4,8 @@ title: Rust Tips
 description: rustで覚えておきたいことのメモ
 lang: ja
 category: rust
+tags:
+  - rust
 created_at: 2021/07/17
 updated_at: 2022/04/12
 ---

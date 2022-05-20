@@ -4,6 +4,10 @@ title: Next.jsでカスタムローダーを使ってmdxをAMP対応させる
 description: Wordpressでブログを作っていたが、パフォーマンスが遅いのでNext.jsで作り直した。mdxをレンダリングするときに使うカスタムローダーを自作してAMP対応させる話。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
 created_at: 2020/09/09
 updated_at: 2022/04/13
 ---

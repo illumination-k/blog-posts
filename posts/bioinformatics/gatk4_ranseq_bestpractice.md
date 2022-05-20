@@ -4,6 +4,9 @@ title: gatk4のRNA-seq bestpractice
 description: genomic sequenceと少しRNA-seqのパイプラインは違うので、bestpracticeをbashで実行するメモ
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - gatk
 created_at: 2020/09/09
 updated_at: 2022/04/12
 ---

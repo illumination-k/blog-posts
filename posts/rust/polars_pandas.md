@@ -4,6 +4,10 @@ title: Rustのデータフレームcrateのpolarsとpandasの比較
 description: rustにも実はpandas likeなcrateがあることを知ったのでpandasとの対応関係をまとめてた。最善である保証はありません。
 lang: ja
 category: rust
+tags:
+  - rust
+  - python
+  - polars
 created_at: 2021/01/09
 updated_at: "2022-04-12T16:34:33+00:00"
 ---

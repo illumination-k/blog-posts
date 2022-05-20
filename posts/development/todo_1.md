@@ -4,6 +4,8 @@ title: 自分専用のTODOアプリを作る
 description: 世の中にはたくさんのTODOアプリが溢れていますが、自分がやりたいことをすべてできるアプリはありませんでした。じゃあ作ってみよう、という話です。
 lang: ja
 category: development
+tags:
+  - development
 created_at: 2021/10/30
 updated_at: 2022/04/12
 ---

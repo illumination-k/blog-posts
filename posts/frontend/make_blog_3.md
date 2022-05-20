@@ -4,6 +4,10 @@ title: Next.jsで作ったブログにStyleを適用していく
 description: Wordpressでブログを作っていたが、パフォーマンスが遅いのでNext.jsで作り直した。markdwonでレンダリングできるようになったので、Styleを適用していく。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
 created_at: 2020/09/08
 updated_at: 2022/04/12
 ---

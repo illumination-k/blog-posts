@@ -4,6 +4,8 @@ title: bashのPermission関連についてのまとめ
 description: bashのPermission関連について、すぐ忘れてしまうのでまとめておきます。
 lang: ja
 category: misc
+tags:
+  - bash
 created_at: 2021/07/01
 updated_at: 2022/04/12
 ---

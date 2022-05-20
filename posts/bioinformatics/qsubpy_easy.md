@@ -4,6 +4,8 @@ title: コマンドをqsubで直接ジョブに投げられるようにする
 description: スパコンを使っていると、qsubを使ってジョブを投げることがあるのではないかと思います。このときに、ワンライナーを実行したいときなど、一回ファイル作ってからコマンドを投げるのが非常にめんどくさいことがあります。そこで、Pythonのargparseとsubprocessを使って擬似的にコマンドからジョブを投げられるようにしました。
 lang: ja
 category: bioinformatics
+tags:
+  - python
 created_at: 2020/09/10
 updated_at: 2022/04/12
 ---

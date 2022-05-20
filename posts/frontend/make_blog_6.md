@@ -4,6 +4,10 @@ title: next.jsで作ってみたブログにamp-sidebarを導入する
 description: next.jsで作ってみたブログにtypescriptとmaterial-uiと一緒にamp-sidebarを導入してみた。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
 created_at: 2020/09/29
 updated_at: 2022/04/12
 ---

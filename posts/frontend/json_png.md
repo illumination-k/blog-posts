@@ -4,6 +4,10 @@ title: JSONで画像をやりとりする python <-> JavaScript(React)
 description: Python、特にmatplotlibで作成したPNGファイルをJSONにSerializeしてフロントエンド側に送りたいときにどうすればいいのかについて
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - python
+  - javascript
 created_at: 2020/09/25
 updated_at: 2022/04/13
 ---

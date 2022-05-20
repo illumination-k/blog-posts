@@ -4,6 +4,9 @@ title: Pythonでupsetplotを使う
 description: 集合関係の包含関係を示すとき、ベン図より使いやすいことのあるupset plotをPythonで使用するやり方です
 lang: ja
 category: python
+tags:
+  - python
+  - plot
 created_at: 2021/08/27
 updated_at: 2022/04/09
 ---

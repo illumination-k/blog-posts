@@ -4,6 +4,9 @@ title: salmonの出力ファイルをtximportで加工する
 description: salmonの出力ファイルはquant.sfですが、その加工は非常に多岐に渡り、結構難しいです。tximportで加工できる先と用途についてまとめていきたいと思います。
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - r
 created_at: 2021/01/19
 updated_at: 2022/04/12
 ---

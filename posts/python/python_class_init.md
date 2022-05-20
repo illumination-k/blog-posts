@@ -4,6 +4,8 @@ title: PythonのClassの生成に関してまとめてみた
 description: PythonのClassは色々難しいので、勉強のためにまとめておきます。まずはClassの生成に関してです。__new__と__init__を中心にまとめています。
 lang: ja
 category: python
+tags:
+  - python
 created_at: 2021/06/29
 updated_at: 2022/04/12
 ---

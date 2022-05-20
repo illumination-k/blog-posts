@@ -4,6 +4,9 @@ title: Phylogenetic Analysisに関するまとめ
 description: "Phylogenetic Analysis各種ステップのAlignment, Trim, Model選択, Tree Constructionに関する情報、ツールに関してまとめ"
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - phylogeny
 created_at: "2022-05-12T08:26:46+00:00"
 updated_at: "2022-05-12T08:27:28+00:00"
 ---

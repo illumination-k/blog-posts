@@ -6,12 +6,12 @@ lang: ja
 category: bioinformatics
 tags:
   - goterm
+  - plot
   - bioinformatics
   - python
 created_at: "2022-05-19T10:56:51+00:00"
 updated_at: "2022-05-19T10:56:51+00:00"
 ---
-
 
 ## TL;DR
 
@@ -25,7 +25,7 @@ RにはGO Enrichmentの結果をいい感じに図示してくれるライブラ
 
 列の意味としては以下を想定しています。
 
-- term: GO Term ID 
+- term: GO Term ID
 - score: -log10(padj)を想定
 - size: アノテーションに含まれる遺伝子数)
 - name: Go Termの名前。ラベルに使う。
@@ -273,17 +273,19 @@ plt.show()
 
 ## Similarityを利用したプロット
 
-GO Termにはsimilarityがあります。[Overview of semantic similarity analysis](https://yulab-smu.top/biomedical-knowledge-mining-book/semantic-similarity-overview.html)あたりが詳しいです。これは、Pythonでは`goatools`を利用することで計算できます。Rだと`GoSemSim`が利用できます。 
+GO Termにはsimilarityがあります。[Overview of semantic similarity analysis](https://yulab-smu.top/biomedical-knowledge-mining-book/semantic-similarity-overview.html)あたりが詳しいです。これは、Pythonでは`goatools`を利用することで計算できます。Rだと`GoSemSim`が利用できます。
 
 `goatools`では、以下の手法をサポートしているようです。
 
 **IC Base**
+
 - Resnik
   - Philip, Resnik. 1999. “Semantic Similarity in a Taxonomy: An Information-Based Measure and Its Application to Problems of Ambiguity in Natural Language.” Journal of Artificial Intelligence Research 11: 95–130.
 - Lin
   - Lin, Dekang. 1998. “An Information-Theoretic Definition of Similarity.” In Proceedings of the 15th International Conference on Machine Learning, 296—304. https://doi.org/10.1.1.55.1832.
 
 **Graph Base**
+
 - wang
   - Wang, James Z, Zhidian Du, Rapeeporn Payattakool, Philip S Yu, and Chin-Fu Chen. 2007. “A New Method to Measure the Semantic Similarity of GO Terms.” Bioinformatics (Oxford, England) 23 (May): 1274–81. https://doi.org/btm087.
 

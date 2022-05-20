@@ -4,6 +4,9 @@ title: GATK4をsplit intervalを使って高速化する
 description: GATK4は実行に時間がかかるツールですが、マシンパワーさえあればsplit intervalを使って高速化できます。interval listについては日本語文献が見つからなかったのでまとめておきます。
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - gatk
 created_at: 2020/09/28
 updated_at: 2022/04/12
 ---

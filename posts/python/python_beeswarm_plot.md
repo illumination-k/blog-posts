@@ -4,6 +4,9 @@ title: Pythonでビースウォーム(beeswarm)プロットを使ってみる
 description: 統計要約量とかを特に考慮せずに、ただデータを概観したいということがあると思います。データの分布を概観するときには、ビースウォームプロットが便利です。seabornを使うことでPythonでもビースウォームプロットを簡単に使えます。
 lang: ja
 category: python
+tags:
+  - python
+  - plot
 created_at: 2021/08/27
 updated_at: 2022/04/12
 ---

@@ -4,6 +4,9 @@ title: SRAからfastqをダウンロードする時の関連知識
 description: SRAからfastqファイルをダウンロードする時の関連知識
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - sra
 created_at: 2021/11/16
 updated_at: 2022/04/12
 ---

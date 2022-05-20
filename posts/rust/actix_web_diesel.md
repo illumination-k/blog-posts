@@ -4,6 +4,10 @@ title: Actix-Web + Diesel + PostgresでCRUDしてみた
 description: Actix-webを使ってみたかったので、DieselのGetting StartをActix-webで実装しました。
 lang: ja
 category: rust
+tags:
+  - rust
+  - actix-web
+  - diesel
 created_at: 2021/07/19
 updated_at: 2022/04/12
 ---

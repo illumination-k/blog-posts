@@ -4,6 +4,8 @@ title: 知っておくと便利なbash知識
 description: 知っておくと便利そうなbash知識をまとめていきます。
 lang: ja
 category: misc
+tags:
+  - bash
 created_at: 2021/06/29
 updated_at: 2022/04/12
 ---

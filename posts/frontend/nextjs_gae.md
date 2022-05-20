@@ -4,6 +4,11 @@ title: Next.jsをCloudbuildでGAEにデプロイ
 description: Next.jsをGoogle App Engine上にCloudBuild経由でデプロイするまで
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
+  - gae
 created_at: "2022-05-14T13:44:17+00:00"
 updated_at: "2022-05-14T13:44:17+00:00"
 ---

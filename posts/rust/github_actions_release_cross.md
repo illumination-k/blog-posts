@@ -4,6 +4,9 @@ title: Github Actionsとcrossを使ってReleaseでクロスコンパイルし�
 description: Github Actionsとcrossを使ってReleaseでクロスコンパイルしてバイナリをアップロードする
 lang: ja
 category: rust
+tags:
+  - rust
+  - github-actions
 created_at: 2020/10/08
 updated_at: 2022/04/12
 ---

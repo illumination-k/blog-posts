@@ -4,6 +4,8 @@ title: WSL2を少しだけ快適にするTips
 description: WSL2をもう少しだけ快適に使うためのTips
 lang: ja
 category: misc
+tags:
+  - wsl2
 created_at: "2022-05-14T17:44:09+00:00"
 updated_at: "2022-05-14T17:44:19+00:00"
 ---

@@ -4,6 +4,8 @@ title: RustでDFSとDFS木
 description: rustで木上のDFSとDFS木
 lang: ja
 category: algorithm
+tags:
+  - algorithm
 created_at: 2021/08/27
 updated_at: "2022-04-12T16:34:32+00:00"
 ---

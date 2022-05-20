@@ -4,6 +4,10 @@ title: amp-listを使ってNext.jsの静的サイトに他のブログ記事へ�
 description: ブログでよくある、関係のある記事をランダムで記事の一番下につけるために、Next.jsでAPIを実装したあと、amp-listを使って動的にそれらを作成します。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
 created_at: 2021/06/29
 updated_at: 2022/04/13
 ---

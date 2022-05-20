@@ -4,6 +4,9 @@ title: next.config.jsで設定することのまとめ
 description: next.jsを使っているとnext.config.jsを使って設定をカスタマイズすることが多いです。next.config.jsで設定できることと、その設定の仕方についてまとめておきます。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - next.js
 created_at: 2021/06/28
 updated_at: 2022/04/12
 ---

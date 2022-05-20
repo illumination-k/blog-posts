@@ -4,6 +4,10 @@ title: MDX or Markdown ?
 description: ブログ記事を書くのに、MDXを使うのか、Markdownを使うのか
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
 created_at: 2020/09/07
 updated_at: 2022/04/12
 ---

@@ -4,6 +4,9 @@ title: 深層学習ベースのGO termアノテーションを試してみる
 description: 自然言語処理技術では深層学習技術が非常に良い成果をあげています。タンパク質配列からGO Termなどのアノテーション行い、機能を推定する方法として、これまでの多くはBLASTなどの相同性検索を用いていました。最近では、いくつかのツールが深層学習ベースで機能予測を行っています。今回はdeepgoplusを試してみることにします。
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - goterm
 created_at: 2021/04/11
 updated_at: 2022/04/12
 ---

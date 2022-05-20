@@ -4,6 +4,9 @@ title: CSSでコードブロックの右上に言語名を表示する
 description: コードを書くときに書いてる言語が何なのか表示すると、見るときに便利です。CSSだけで実現できます。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - css
 created_at: 2021/06/28
 updated_at: 2021/09/29
 ---

@@ -4,6 +4,9 @@ title: SRAにAsperaを使ってデータをアップロードする
 description: httpやftpによるSRAへのデータアップロードは遅すぎるので、IBMのaspera connectを使ってデータをアップロードするやり方を使おう。
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - sra
 created_at: 2021/09/11
 updated_at: 2022/04/12
 ---

@@ -4,6 +4,8 @@ title: macroを使ってopを実装する
 description: 構造体に対して演算子を実装するときに、マクロを使わないとすごく長くなるのでマクロの使い方についてまとめておく。
 lang: ja
 category: rust
+tags:
+  - rust
 created_at: 2021/08/01
 updated_at: 2022/04/12
 ---

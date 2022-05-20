@@ -4,6 +4,11 @@ title: Next.jsで作ってみたブログに検索機能を導入する
 description: Next.jsで作ってみたブログに形態素解析とflexsearchで検索機能を導入する
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
+  - fulltext-search
 created_at: 2020/09/14
 updated_at: 2022/04/13
 ---

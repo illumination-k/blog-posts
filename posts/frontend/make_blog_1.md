@@ -4,6 +4,10 @@ title: Next.jsでブログを作ってみた
 description: Wordpressでブログを作っていたが、パフォーマンスが遅いのでNext.jsで作り直した。ほしい要件、使うフレームワークの選定など。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
 created_at: 2020/09/07
 updated_at: 2022/04/12
 ---
@@ -22,11 +26,11 @@ Wordpressのトップ画面はこんな感じなので、これよりはよく�
 
 **Before**
 
-![lighthouse-wordpress-top](/images/lighthouse-wordpress-top.PNG)
+![lighthouse-wordpress-top](../../public/lighthouse-wordpress-top.PNG)
 
 **After 2020/09/30**
 
-![lighthouse-next-blog](/images/lighthouse-nextblog-top.PNG)
+![lighthouse-next-blog](../../public/lighthouse-nextblog-top.PNG)
 
 ## 要件
 

@@ -4,6 +4,9 @@ title: Excvrとrust-analyzerでJupyterでRust
 description: RustでJupyter環境を構築して、rust-analyzerで補完できるようにします。
 lang: ja
 category: rust
+tags:
+  - rust
+  - jupyter
 created_at: 2021/12/14
 updated_at: "2022-04-12T15:34:17+00:00"
 ---

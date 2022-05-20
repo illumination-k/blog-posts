@@ -4,6 +4,9 @@ title: JavaScriptでのrandomに関するまとめ
 description: JavaScriptのランダムは非常に使い勝手が悪いので選択肢とか、よく使う関数などのまとめです。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - javascript
 created_at: 2021/07/16
 updated_at: 2022/04/13
 ---

@@ -4,6 +4,9 @@ title: CellRangerでSTARのパラメータを変更する
 description: single cell RNA-seqを知ってる人ならまず知っているであろう、Cell Ranger。使ったことがなかったんですが、ちょっと使ってみようかなと思いました。しかし、これ内部的にはSTARを使ってマッピングするんですが、STARのパラメーターを引数でとれない、という問題（誰も問題にしていない）があります。公式の解答としては、自分でビルドしてね、責任は持たないけど、ってことらしいです。
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - single-cell-rnaseq
 created_at: 2020/09/10
 updated_at: 2022/04/12
 ---

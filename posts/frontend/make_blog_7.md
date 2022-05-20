@@ -4,6 +4,10 @@ title: Next.jsで作ったブログをAMPとPWAに対応させる
 description: Next.jsで作ったAMPオンリーのブログをPWAにも対応させてみた。
 lang: ja
 category: frontend
+tags:
+  - frontend
+  - development
+  - next.js
 created_at: 2020/09/30
 updated_at: 2022/04/13
 ---

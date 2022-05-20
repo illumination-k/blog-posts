@@ -4,6 +4,8 @@ title: 平面上でのダイクトストラ (rust)
 description: 二次元平面上でダイクトストラやりたいってときのための覚書
 lang: ja
 category: algorithm
+tags:
+  - algorithm
 created_at: 2021/08/27
 updated_at: "2022-04-12T16:34:32+00:00"
 ---

@@ -4,6 +4,9 @@ title: matplotlibでcolorbarのみplotし、ある値がどの色になるのか
 description: matplotlibを使っていて、colorbarだけ作りたいとき、そして作ったcolorbarに対して、ある値がどの色になるのか知りたい、というニッチな状況への対応策
 lang: ja
 category: python
+tags:
+  - python
+  - plot
 created_at: 2020/09/26
 updated_at: "2022-05-19T10:56:52+00:00"
 ---

@@ -4,6 +4,9 @@ title: DjangoでPylanceがimportを解決しない問題の対処法
 description: Pylanceは非常に優れたコーディング支援拡張機能ですが、importがよく解決されなくて困っていました。小規模開発のときはまあいいか、と思ったりするのですが、djangoとかで解決されないと結構手間なので、解決法を調べたら解決したので書いておきます。
 lang: ja
 category: python
+tags:
+  - python
+  - django
 created_at: 2021/02/17
 updated_at: 2022/04/12
 ---

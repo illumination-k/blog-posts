@@ -4,9 +4,18 @@ title: Markdownの中のコードをフォーマットするツールを作っ�
 description: Markdown内のコードをフォーマットしたいので、作りました。
 lang: ja
 category: rust
+tags:
+  - rust
+  - archive
 created_at: 2021/07/17
-updated_at: 2022/04/12
+updated_at: 2022/05/21
 ---
+
+## dprintを使おう
+
+`dprint`はMarkdown中のコードを整形してくれる上、Vscodeに対応しています。こちらを使いましょう。
+
+![github:dprint/dprint](github:dprint/dprint)
 
 ## TL;DR
 

@@ -4,6 +4,9 @@ title: GO Termに関する基礎
 description: GO解析はよく使われる解析手法ですが、正確に理解するには、まずGOそのものに関する理解が必要になります。GO Termの基本についてまとめていきます。
 lang: ja
 category: bioinformatics
+tags:
+  - bioinformatics
+  - goterm
 created_at: "2022-05-12T17:00:48+00:00"
 updated_at: "2022-05-14T13:44:17+00:00"
 ---

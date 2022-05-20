@@ -5,5 +5,3 @@ description: "polarsのio関連について"
 lang: ja
 category: ""
 ---
-
-

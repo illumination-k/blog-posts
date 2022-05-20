@@ -4,6 +4,8 @@ title: 競技プログラミングに関するメモ
 description: 競技プログラミングに関する自分用のメモ
 lang: ja
 category: algorithm
+tags:
+  - algorithm
 created_at: 2021/08/27
 updated_at: "2022-04-12T15:33:20+00:00"
 ---

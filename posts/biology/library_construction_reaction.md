@@ -4,6 +4,9 @@ title: NGSライブラリ調製の時に使用される反応まとめ
 description: NGSライブラリ調製の際には多様な反応が使用されている。それらのうち、知っているものについて原理をまとめていきたい。
 lang: ja
 category: biology
+tags:
+  - biology
+  - ngs
 created_at: 2021/01/03
 updated_at: "2022-04-12T15:33:45+00:00"
 ---
