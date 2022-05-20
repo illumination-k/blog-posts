@@ -5,8 +5,7 @@ description: RにはGO Enrichmentの結果をいい感じに図示してくれ�
 lang: ja
 category: bioinformatics
 tags:
-  - go
-  - term
+  - goterm
   - bioinformatics
   - python
 created_at: "2022-05-19T10:56:51+00:00"

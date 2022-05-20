@@ -21,4 +21,4 @@ jobs:
           heroku_app_name: "blog-post-smark"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
       - name: Deploy cloud build
-        run: curl -X POST -d '{}' ${{secrets.DEV_URL}}
+        run: curl -X POST -d '{}' "${{secrets.DEV_URL}}"
