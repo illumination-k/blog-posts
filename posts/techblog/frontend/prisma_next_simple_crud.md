@@ -5,7 +5,7 @@ description: O/Rマッパとしてprismaを使用して、簡単なCRUDをNext.j
 lang: ja
 category: techblog
 tags:
-  - nextjs
+  - next.js
   - prisma
 created_at: "2022-05-20T18:42:50+00:00"
 updated_at: "2022-05-20T18:42:50+00:00"

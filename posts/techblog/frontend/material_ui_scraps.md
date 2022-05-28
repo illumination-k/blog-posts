@@ -6,7 +6,7 @@ lang: ja
 category: techblog
 tags:
   - frontend
-  - materialui
+  - material-ui
 created_at: "2022-05-20T18:42:50+00:00"
 updated_at: "2022-05-20T18:42:50+00:00"
 ---

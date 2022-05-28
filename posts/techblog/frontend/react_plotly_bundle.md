@@ -4,6 +4,8 @@ title: plotly.jsのbundle sizeを削減する
 description: plotlyはJavascriptだけでなくPythonやRでも使われている非常に利便性の高いライブラリです。しかし、フロントエンドで使うにはバンドルサイズが大きすぎるという問題があります。plotlyのバンドルサイズの削減方法と、react-plotly.jsでの適用方法をまとめておきます。
 lang: ja
 category: techblog
+tags:
+  - plotly
 created_at: "2022-05-20T18:42:50+00:00"
 updated_at: "2022-05-20T18:42:50+00:00"
 ---
