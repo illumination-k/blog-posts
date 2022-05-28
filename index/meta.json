@@ -4,45 +4,20 @@
   },
   "segments": [
     {
-      "segment_id": "f6747766-2620-4f70-9fb6-e8b4046d8cae",
+      "segment_id": "24f66df2-80ac-4ebf-9390-0b7a2b0e380e",
       "max_doc": 63,
       "deletes": {
-        "num_deleted_docs": 7,
-        "opstamp": 1243
+        "num_deleted_docs": 2,
+        "opstamp": 311
       }
     },
     {
-      "segment_id": "3b52c472-edf6-424c-9979-dbe180f128ce",
+      "segment_id": "1a7a55c4-1134-48a1-9289-dbc61e0fb916",
       "max_doc": 1,
       "deletes": null
     },
     {
-      "segment_id": "48600f1d-79d5-4a81-b8f9-a2f7d27e416e",
-      "max_doc": 1,
-      "deletes": null
-    },
-    {
-      "segment_id": "736e68ff-cc36-4094-9cb4-62b55c879668",
-      "max_doc": 1,
-      "deletes": null
-    },
-    {
-      "segment_id": "962babe0-97c3-4582-84dc-0f3a90ad7687",
-      "max_doc": 1,
-      "deletes": null
-    },
-    {
-      "segment_id": "b46f0d03-2919-4400-9594-d0d67fa06910",
-      "max_doc": 1,
-      "deletes": null
-    },
-    {
-      "segment_id": "f0b40f10-8cd2-47db-87d0-9d0a27ced5d4",
-      "max_doc": 1,
-      "deletes": null
-    },
-    {
-      "segment_id": "fc7a0969-6172-49ca-a2b7-1d14189899c6",
+      "segment_id": "75f68ef9-ae8d-4452-8e7d-e33a4c6617f3",
       "max_doc": 1,
       "deletes": null
     }
@@ -50,17 +25,6 @@
   "schema": [
     {
       "name": "body",
-      "type": "text",
-      "options": {
-        "indexing": {
-          "record": "position",
-          "tokenizer": "default"
-        },
-        "stored": true
-      }
-    },
-    {
-      "name": "tags",
       "type": "text",
       "options": {
         "indexing": {
@@ -88,6 +52,17 @@
         "indexing": {
           "record": "position",
           "tokenizer": "default"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "tags",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "whitespace_tokenizer"
         },
         "stored": true
       }
@@ -188,5 +163,5 @@
       }
     }
   ],
-  "opstamp": 1243
+  "opstamp": 311
 }
