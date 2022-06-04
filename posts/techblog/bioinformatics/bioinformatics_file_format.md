@@ -56,7 +56,7 @@ IENY
 
 | tool name                                              | description                             |
 | ------------------------------------------------------ | --------------------------------------- |
-| [seqkit](https://bioinf.shenwei.me/seqkit/)            | 基本的になんでもできる。GOで書かれていて、マルチスレッドにも対応しており高速 |
+| [seqkit](https://bioinf.shenwei.me/seqkit/)            | 基本的になんでもできる。golang で書かれていて、マルチスレッドにも対応しており高速 |
 | [samtools](http://samtools.sourceforge.net)            | faidxの作成とか、sam/bamをfastaに変換したりなど        |
 | [picard](https://broadinstitute.github.io/picard/)     | dictの作成                                 |
 | [bedtools](https://bedtools.readthedocs.io/en/latest/) | bedの情報から配列を抜くときなどに使う                    |
@@ -92,7 +92,7 @@ $$Q = -10log_{10}p$$
 - [fastp](https://github.com/OpenGene/fastp)
 - [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 
-#### マッピング・定量ツール (fastq-> SAM/BAM)
+#### マッピング・定量ツール (fastq -> SAM/BAM)
 
 SAM/BAMに変換する際には、以下のようなMapping Toolが使われていることが多いように思えます。RNA-seqの際にはイントロン等を考慮する必要があるので、DNAを読むときとは別に処理が必要になり、専用のMapping Toolを使う必要があります。Bisulfite SequenceなどはDNAですが、処理が特殊なので専用のMapping Toolが必要です。
 
@@ -135,9 +135,9 @@ miRNAの定量はイントロンとかないのでDNAと同じ感じでもいい
 
 TCGAとかで扱われているmiRNA-seq解析はまた別の[パイプライン](https://github.com/bcgsc/mirna)が使われていたりします。
 
-### SAM/BAM
+### SAM/BAM/CRAM
 
-マッピングを行ったあと扱うようになるファイルフォーマットです。BAMはSAMをバイナリ化したものでフォーマットとしては同一です。あまりSAMのまま扱うことはなく、BAMに変換されることが多いです。リードのヘッダ、配列、クオリティ、マッピング位置などほぼすべての情報が格納されている。情報が膨大なので、フォーマットの詳細は[マニュアル](https://samtools.github.io/hts-specs/SAMv1.pdf)を読んでほしいです。マニュアル以外の有用そうなリンクをまとめておきます。
+マッピングを行ったあと扱うようになるファイルフォーマットです。BAMはSAMをバイナリ化したものでフォーマットとしては同一です。CRAMはfasta情報を使って更に圧縮率を上げることができるフォーマットです。あまりSAMのまま扱うことはなく、BAM/CRAMに変換されることが多いです。リードのヘッダ、配列、クオリティ、マッピング位置などほぼすべての情報が格納されている。情報が膨大なので、フォーマットの詳細は[マニュアル](https://samtools.github.io/hts-specs/SAMv1.pdf)を読んでほしいです。マニュアル以外の有用そうなリンクをまとめておきます。
 
 #### SAM sample
 
@@ -268,7 +268,7 @@ bamCoverage -b input.bam -o output.bw
 
 ### bed
 
-[bedtools](https://bedtools.readthedocs.io/en/latest/)で扱います。Pythonなどでは[pybedtools](https://daler.github.io/pybedtools/)のようなライブラリが提供されています。最初の三行(chrom, chromStart, chromEnd)が必須で、その他が自由なフォーマットです。一応ある程度は決まっていて、[UCSCのFAQ](https://genome.ucsc.edu/FAQ/FAQformat.html#format1)では、
+[bedtools](https://bedtools.readthedocs.io/en/latest/)などで扱います。Pythonなどでは[pybedtools](https://daler.github.io/pybedtools/)のようなライブラリが提供されています。最初の三行(chrom, chromStart, chromEnd)が必須で、その他が自由なフォーマットです。一応ある程度は決まっていて、[UCSCのFAQ](https://genome.ucsc.edu/FAQ/FAQformat.html#format1)では、
 
 1. chrom: 染色体名
 2. chromStart: スタート位置(0-index)
