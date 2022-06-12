@@ -7,7 +7,7 @@ category: techblog
 tags:
   - python
   - sqlalchemy
-updated_at: "2022-06-12T15:55:40+00:00"
+updated_at: "2022-06-12T15:59:16+00:00"
 ---
 
 ## TL;DR
@@ -25,7 +25,7 @@ SQLAlchemyは素晴らしいORMですが、`django`等と違ってテストや�
 3. テスト
 4. Migration
 
-![github:]
+![github:illumination-k/sqlalchemy-starter](github:illumination-k/sqlalchemy-starter)
 
 ## Install
 
@@ -50,6 +50,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.10"
 SQLAlchemy = {extras = ["mypy"], version = "^1.4.37"}
+psycopg2 = "^2.9.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
@@ -430,3 +431,10 @@ main=# \dt
 >  public | user            | table | postgres
 > (3 rows)
 ```
+
+## 終わりに
+
+以上で個人的に使いやすいSQLAlchemyのテスト環境のセットアップは終わりです。
+こうすればもっとよくなる！みたいなものがあれば以下のレポジトリのissueとかで教えてくれると助かります。
+
+![github:illumination-k/sqlalchemy-starter](github:illumination-k/sqlalchemy-starter)
