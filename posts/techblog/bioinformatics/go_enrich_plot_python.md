@@ -10,7 +10,7 @@ tags:
   - bioinformatics
   - python
 created_at: "2022-05-20T18:42:50+00:00"
-updated_at: "2022-05-20T18:42:50+00:00"
+updated_at: "2022-06-12T15:55:39+00:00"
 ---
 
 ## TL;DR
@@ -34,7 +34,9 @@ RにはGO Enrichmentの結果をいい感じに図示してくれるライブラ
 <details>
 <summary>CSV data</summary>
 
-```csv:title=example.csv
+`example.csv`
+
+```csv
 term,score,size,name,cluster
 GO:0090407,1.5297085894511266,41,organophosphate biosynthetic process,C1
 GO:0006073,1.5163222189613395,83,cellular glucan metabolic process,C1

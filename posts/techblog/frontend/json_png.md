@@ -1,6 +1,6 @@
 ---
 uuid: eff9cc47-a0d4-4c9e-9027-c15e13a88563
-title: JSONで画像をやりとりする python <-> JavaScript(React)
+title: JSONで画像をやりとりする python <-> JavaScript (React)
 description: Python、特にmatplotlibで作成したPNGファイルをJSONにSerializeしてフロントエンド側に送りたいときにどうすればいいのかについて
 lang: ja
 category: techblog
@@ -9,7 +9,7 @@ tags:
   - python
   - javascript
 created_at: "2022-05-20T18:42:50+00:00"
-updated_at: "2022-05-20T18:42:50+00:00"
+updated_at: "2022-06-12T15:55:39+00:00"
 ---
 
 ## TL;DR

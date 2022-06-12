@@ -9,7 +9,7 @@ tags:
   - plot
   - matplotlib
 created_at: "2022-05-20T18:42:50+00:00"
-updated_at: "2022-05-20T18:42:50+00:00"
+updated_at: "2022-06-12T15:55:40+00:00"
 ---
 
 ## TL;DR
@@ -23,7 +23,7 @@ matplotlibを使っていて、colorbarだけ作りたい！そして、何ら�
 
 ## やり方
 
-[matplotlib.colorbar.ColorbarBase](https://matplotlib.org/3.3.1/api/colorbar_api.html#matplotlib.colorbar.ColorbarBase)を使います。また、カラーバーの値の範囲を決める、ある値がどの色になるかを決める際に、[matplotlib.colors.Normalize](https://matplotlib.org/3.3.1/api/_as_gen/matplotlib.colors.Normalize.html)を使います。
+[matplotlib.colorbar.Colorbar](https://matplotlib.org/stable/api/colorbar_api.html)を使います。また、カラーバーの値の範囲を決める、ある値がどの色になるかを決める際に、[matplotlib.colors.Normalize](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Normalize.html)を使います。
 
 まず範囲を決めます。
 
@@ -32,7 +32,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 
 print(mpl.__version__)
-# '3.2.2'
+# 3.4.3
 
 vmin = -10
 vmax = 10
@@ -56,7 +56,7 @@ mpl.colorbar.Colorbar(
 plt.savefig("sample_colormap.png", bbox_inches="tight")
 ```
 
-<amp-img src="../../public/colorbar_sample.png" height="20rem" width="8rem" alt="sample_colorbar" />
+![md={4}:sample_colorbar](../../public/colorbar_sample.png)
 
 対応するrgbaカラーを取得します。
 

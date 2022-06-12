@@ -7,7 +7,7 @@ category: techblog
 tags:
   - bioinformatics
 created_at: "2022-05-20T18:42:50+00:00"
-updated_at: "2022-05-20T18:42:50+00:00"
+updated_at: "2022-06-12T15:55:38+00:00"
 ---
 
 ## TL;DR
@@ -54,12 +54,12 @@ IENY
 
 #### fastaフォーマットを扱うツール
 
-| tool name                                              | description                             |
-| ------------------------------------------------------ | --------------------------------------- |
+| tool name                                              | description                                  |
+| ------------------------------------------------------ | -------------------------------------------- |
 | [seqkit](https://bioinf.shenwei.me/seqkit/)            | 基本的になんでもできる。golang で書かれていて、マルチスレッドにも対応しており高速 |
-| [samtools](http://samtools.sourceforge.net)            | faidxの作成とか、sam/bamをfastaに変換したりなど        |
-| [picard](https://broadinstitute.github.io/picard/)     | dictの作成                                 |
-| [bedtools](https://bedtools.readthedocs.io/en/latest/) | bedの情報から配列を抜くときなどに使う                    |
+| [samtools](http://samtools.sourceforge.net)            | faidxの作成とか、sam/bamをfastaに変換したりなど             |
+| [picard](https://broadinstitute.github.io/picard/)     | dictの作成                                      |
+| [bedtools](https://bedtools.readthedocs.io/en/latest/) | bedの情報から配列を抜くときなどに使う                         |
 
 ### fastq
 

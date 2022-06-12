@@ -8,12 +8,16 @@ tags:
   - bioinformatics
   - phylogeny
 created_at: "2022-05-20T18:42:50+00:00"
-updated_at: "2022-05-20T18:42:50+00:00"
+updated_at: "2022-06-12T15:55:39+00:00"
 ---
 
 ## TL;DR
 
-Phylogenetic Analysis各種ステップのAlignment, Trim, Model選択, Tree Constructionに関する情報、ツールに関してまとめる。
+Phylogenetic Analysis各種ステップのAlignment, Trim, Model selection, Tree Constructionに関する情報、ツールに関してまとめる。
+
+すごくまとまってる日本語の総説があったので、そちらを読むことをおすすめします。
+
+> [分子系統解析の最前線](https://www.jstage.jst.go.jp/article/jsbibr/2/1/2_jsbibr.2021.7/_pdf)
 
 ## Alignment
 
@@ -41,6 +45,10 @@ Phylogenetic Analysis各種ステップのAlignment, Trim, Model選択, Tree Con
 - `KALIGN`は速くてMAFFTに近い正確性
 
 この辺のツールは結構歴史が古いので、1900年代のツールが現役で使われる。`make`するときなどに、`g++ (4.3)`とかが想定されてたりするので注意が必要。
+
+### m-coffee
+
+上で挙げたようなツールでMSAをとったあと、それらのコンセンサスをうまく取ることでより良いMSAを作成するツール。[PhylomeDB](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkab966/6414570)のパイプラインで使われている。試した見たところ、上で挙げたツールのバイナリを配布していたりしてすごく親切。
 
 ## Trim
 
@@ -79,7 +87,7 @@ modeltellerのweb siteはhttpsじゃなくて怖かったため貼ってない�
 
 ## Tree Construction
 
-距離行列法や、最節約法などがあるが、基本的には最尤法・ベイズ法を使うのがよいと思われる。最尤法・ベイズ法は結果が割れることがあるので、比較してみたほうがいいと思われる。多分最もよく使われているのは、`iqtree`, `raxml`, `mrbayes`あたりだと思う。
+距離行列法や、最節約法などがあるが、基本的には最尤法・ベイズ法を使うのがよいと思われる。最尤法・ベイズ法は結果が割れることがあるので、比較が必要になる場合もある。多分最もよく使われているのは、`iqtree`, `raxml`, `mrbayes`あたりだと思う。あとは特殊ケースとして進化距離が大きすぎる場合はGraph Splitting法([gs2](https://github.com/MotomuMatsui/gs))、ドメインシャッフリングが起こっている場合は系統ネットワークを構築する方法([SplitsTree](https://github.com/husonlab/splitstree5))を利用するといいらしい。
 
 ### Software一覧
 
@@ -93,9 +101,19 @@ modeltellerのweb siteはhttpsじゃなくて怖かったため貼ってない�
 #### ベイズ法
 
 - [mrbayes](https://nbisweden.github.io/MrBayes/download.html)
+- [beast](https://beast.community)
 
 [bayes法の実装のチュートリアル](https://github.com/thednainus/Bayesian_tutorial)とかも参考になる。
 
 ### 進化モデル
 
 基本的に、最尤法側ではモデル選択ツールが出してくれる形態で書いてあるのでそれほど困ることはない。MrBayesを使用する場合は、結構違うので注意が必要。詳細は[Manual](http://mrbayes.sourceforge.net/mb3.2_manual.pdf)を参照。Mrbayesでは使用できる進化モデルが少し少ないが、Manual的には、`lset nst=mixed`あたりを使ってMCMC samplingで決めるのがベイズ的って書いてる。
+
+## Visualization
+
+個人的によく使うのは以下で、この2つであまり困ってない。iTOLは課金すると快適になる。
+
+- [iTOL](https://itol.embl.de)
+- [FigTree](https://github.com/rambaut/figtree/)
+
+ライブラリとしては、[ETE3 (Python)](https://github.com/etetoolkit/ete)や[ggtree (R)](https://github.com/YuLab-SMU/ggtree)あたりが有力。

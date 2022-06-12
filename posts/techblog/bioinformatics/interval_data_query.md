@@ -1,13 +1,13 @@
 ---
 uuid: 7ff96bd4-843a-4eec-ace7-2f36b32507fe
-title: 区間に関するクエリを行うために
+title: 区間に関するクエリ
 description: 区間に関するクエリを行うためのツールやデータ構造に関するメモ
 lang: ja
 category: techblog
 tags:
   - bioinformatics
   - data-structure
-updated_at: "2022-06-04T11:51:17+00:00"
+updated_at: "2022-06-12T15:55:39+00:00"
 ---
 
 ## TL;DR
@@ -30,7 +30,7 @@ CLIである`bedtools`などを使えばこういったクエリをある程度�
 - [bedtk](https://github.com/lh3/bedtk)
 
 テスト済みのツールが使えるので定型的な処理をする分には安心感がある。また、`bed`などのパーサーを書かなくていいので嬉しい。
-一番メジャー・できる処理が多いのは`bedtools`、高速なのは`bedtk`かなという感じを受ける。
+一番メジャーかつできる処理が多いのは`bedtools`、高速なのは`bedtk`かなという感じを受ける。
 
 ### 自作
 
