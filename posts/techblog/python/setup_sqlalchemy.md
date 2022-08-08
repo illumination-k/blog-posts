@@ -7,7 +7,7 @@ category: techblog
 tags:
   - python
   - sqlalchemy
-updated_at: "2022-06-12T15:59:16+00:00"
+updated_at: "2022-08-08T17:49:14+00:00"
 ---
 
 ## TL;DR
@@ -303,7 +303,6 @@ class Post(Base):
     )  # dialectには型アノテーションが必要
     user: "User" = relationship("User", back_populates="posts")  # relationにも型アノテーションが必要
 ```
-
 
 ## 3. Test
 
