@@ -9,7 +9,7 @@ tags:
   - development
   - next.js
 created_at: "2022-05-20T18:42:50+00:00"
-updated_at: "2022-08-08T17:49:13+00:00"
+updated_at: "2022-08-19T11:42:42+00:00"
 ---
 
 ## TL;DR
